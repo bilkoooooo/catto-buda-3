@@ -14,59 +14,59 @@ export const GallerySection = () => {
 
     const galleryRef = useRef<HTMLDivElement | null>(null);
 
-    useGSAP(() => {
-        const images: Array<HTMLImageElement> = gsap.utils.toArray("#img-gallery img");
-
-        if (!images.length && !galleryRef.current) {
-            return;
-        }
-
-        const {current: gallery} = galleryRef;
-
-        const scrollAnim = gsap.timeline({
-            scrollTrigger: {
-                trigger: gallery,
-                start: "top top",
-                end: "+=200",
-                scrub: 1,
-                // markers: true,
-                pin: true,
-                onUpdate: () => {
-                    // console.log(self);
-                },
-            }
-        });
-
-        scrollAnim.to('.self-promo', {
-            x: '0',
-        });
-
-        images.forEach((image: HTMLImageElement, index: number) => {
-            scrollAnim.to(image, {
-                opacity: 1,
-                duration: 0.5,
-                delay: index * 0.1,
-            });
-        });
-    }, [files]);
 
     useEffect(() => {
         getAllFiles().then(files => setFiles(files));
     }, []);
 
+    useGSAP(() => {
+        const images: Array<HTMLImageElement> = gsap.utils.toArray("#img-gallery img");
+
+        if (!images.length || !galleryRef.current) {
+            return false;
+        }
+
+        gsap.to('.self-promo', {
+            x: '0',
+        });
+
+        images.forEach((image: HTMLImageElement) => {
+            image.style.opacity = '0';
+            gsap.to(image, {
+                opacity: 1,
+                duration: 0.75,
+            });
+        });
+    }, [files]);
+
+    const onImageLoad = (image, index) => {
+        gsap.to(image, {
+            opacity: 1,
+            duration: 0.75,
+            delay: index * 0.2,
+            scrollTrigger: {
+                trigger: galleryRef.current,
+                start: "top top",
+                // toggleActions: "play none none reverse",
+                markers: true
+            }
+        });
+    }
+
     const ImageList = () => <div id={"img-gallery"}
                                  className={"flex basis-full flex-shrink-0 items-center justify-center gap-2"}>
         {files.slice(0, 4).map((file, index) => (
-            <div key={index} className={"relative w-1/4 h-1/4"}>
+            <div key={index} className={"relative w-1/4 h-1/4 image"}>
+                {file}
                 <Image
-                    style={{opacity: 0}}
                     loading={"lazy"}
                     fill={true}
                     quality={100}
                     sizes="(max-width: 768px) 200px, (max-width: 1200px) 50vw, 33vw"
                     src={`/gallery/${file}`}
                     alt={file}
-                    className={"grayscale hover:grayscale-0 duration-300"}/>
+                    onLoad={(e) => onImageLoad(e.target, index)}
+                    className={"grayscale hover:grayscale-0 duration-300 opacity-0"}/>
             </div>
         ))}
     </div>;

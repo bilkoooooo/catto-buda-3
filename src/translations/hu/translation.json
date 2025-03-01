@@ -140,22 +140,16 @@
       }
     },
     {
+      "id": "requests",
       "title": "Milyen kérésekkel válassz engem?",
       "text": [
-        "Mivel régóta tetoválok, munkásságom sokoldalú, nem specializálódtam szigorúan egy-egy stílusra. Persze nekem is vannak testhez (lélekhez) állóbb feladatok, így ezeket előnyben fogom részesíteni és lesz olyan kérés amit elutasítok.",
-        "Ami nekem való:",
-        "Élő dolgok – állatok, emberek, kitalált lények.",
-        "'Stílusában'- realisztikus (élethű), szürreális, meseszerű (rajzos, akár képregényes)",
-        "Tetszenek az új trendek is! *",
-        "Színes és fekete fehér munkákat egyaránt szívesen készítek.",
-        "Ami nem nekem való:",
-        "Hagyományos törzsi minták – maori, japán (ezeknek a történelemmel bíró mintáknak komoly szimbólumrendszere van, amiknek a jelentéséről keveset tudok)",
-        "Horrorisztikus vagy negatív témák.",
-        "Amit nem fogok elvállalni:",
-        "Más tetováló munkájának folytatása, javítása, takarása.",
-        "Takarást csak nagyon egyedi esetekben, ha úgy látom teljes értékű végeredményt tudok rá alkotni. (Itt gyakran ajánlom előbb a lézeres halványítást, ami sok idő lehet, de sokkal szebb megoldásokat tudok tervezni rá.)",
-        "Feliratokat, pici (pár centis tetoválásokat).",
-        "*Ha több kisebb tetoválást készíthetek egy napon egy vendégre, az természetesen megoldható."
+        "<div>Mivel régóta tetoválok, munkásságom sokoldalú, nem specializálódtam szigorúan egy-egy stílusra. Persze nekem is vannak testhez (lélekhez) állóbb feladatok, így ezeket előnyben fogom részesíteni és lesz olyan kérés amit elutasítok. </div>",
+        "<div>Ami nekem való:  </div> ",
+        "<div>Élő dolgok – állatok, emberek, kitalált lények. </br> 'Stílusában'- realisztikus (élethű), szürreális, meseszerű (rajzos, akár képregényes). </br> Tetszenek az új trendek is! * </br> Színes és fekete fehér munkákat egyaránt szívesen készítek.",
+        "<div>Ami nem nekem való:</div>",
+        "<div>Hagyományos törzsi minták – maori, japán (ezeknek a történelemmel bíró mintáknak komoly szimbólumrendszere van, amiknek a jelentéséről keveset tudok) </br> Horrorisztikus vagy negatív témák. </br> <div>",
+        "<div>Amit nem fogok elvállalni:</div>",
+        "<div>Más tetováló munkájának folytatása, javítása, takarása. </br> Takarást csak nagyon egyedi esetekben, ha úgy látom teljes értékű végeredményt tudok rá alkotni. (Itt gyakran ajánlom előbb a lézeres halványítást, ami sok idő lehet, de sokkal szebb megoldásokat tudok tervezni rá.) </br> Feliratokat, pici (pár centis tetoválásokat). </br> *Ha több kisebb tetoválást készíthetek egy napon egy vendégre, az természetesen megoldható. </div>"
       ],
       "colors": {
         "background": {

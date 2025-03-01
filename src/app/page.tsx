@@ -32,8 +32,6 @@ export default function Home() {
                 <InfoSection/>
 
                 <GallerySection/>
-
-                <div className={"h-screen"}></div>
             </div>
         </>
     );

@@ -122,13 +122,13 @@ export const InfoSection = () => {
     );
 
     const Title = ({title}: { title: string }) => (
-        <div className="stroked-text text-6xl font-bold mb-4">
+        <div className="stroked-text text-[2.5rem] font-bold mb-4">
             {title}
         </div>
     )
 
     const Text = ({children}: { children: ReactNode }) => (
-        <div className={"py-0.5 leading-5"}>{children}</div>
+        children
     )
 
     const List = ({items, title}: { items: string[], title: string | null }) => {
@@ -145,19 +145,21 @@ export const InfoSection = () => {
     }
 
     interface PanelsProps {
+        id? : string,
         children: ReactNode,
         colors: { background: { from: string, to: string } }
     }
 
-    const Panels = ({children, colors}: PanelsProps) => {
+    const Panels = ({children, colors, id}: PanelsProps) => {
         const {background: {from, to}} = colors || {background: {from: 'black', to: 'black'}};
 
         return (
             <section
+                id={id}
                 style={{backgroundImage: `linear-gradient(to right, ${from}, ${to})`}}
-                className={cn(`panel grow-1 shrink-0 basis-full h-screen min-h-screen w-screen py-20 px-8 flex items-stretch`)}>
+                className={cn(`panel grow-1 shrink-0 basis-full w-screen py-20 px-8 flex`)}>
                 <div
-                    className="basis-full bg-white bg-opacity-40 backdrop-blur-lg p-8 rounded-lg flex flex-col justify-center items-start gap-4 overflow-hidden">
+                    className="basis-full h-fit bg-white bg-opacity-40 self-center backdrop-blur-lg p-8 rounded-lg drop-shadow-lg flex flex-col justify-start items-start gap-4 overflow-hidden [text-shadow:_2px_2px_10px_rgb(0_0_0_/_100%)]">
                     {children}
                 </div>
             </section>
@@ -198,11 +200,11 @@ export const InfoSection = () => {
         <section id="info-section" className={"relative"}>
             <div ref={containerRef}
                  className="info-section flex flex-nowrap overscroll-none relative h-screen w-screen">
-                {Object.values(info).map(({title, text, text2, list, colors}, index) => (
-                    <Panels key={index} colors={colors}>
+                {Object.values(info).slice(6,7).map(({title, text, text2, list, colors, id}, index) => (
+                    <Panels key={index} colors={colors} id={id}>
                         <Title title={title}/>
 
-                        <div className="max-w-[600px]">
+                        <div className="text-container">
                             {text.map((text, index) => (
                                 <Text key={index}>
                                     {parse(text)}

@@ -69,6 +69,29 @@ body {
     font-family: "Bebas Neue", serif;
 }
 
-section.panel {
-    /*max-width: 1280px;*/
+section {
+    .panel {
+        /*max-width: 1280px;*/
+    }
+
+    #requests {
+        .text-container {
+            max-width: 1280px;
+            display: grid;
+            grid-template-rows:  repeat(2, auto);
+            grid-template-areas:
+                "a a"
+                "b _b"
+                "c _c"
+                "d _d";
+            gap: 4px 8px;
+
+            text-align: justify;
+
+            div:first-of-type {
+                max-width: 600px;
+                grid-area: a;
+            }
+        }
+    }
 }
