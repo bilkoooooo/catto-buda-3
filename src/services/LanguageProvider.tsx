@@ -36,7 +36,7 @@ type LanguageDataType = {
         text: string[],
         text2?: string[] | undefined,
         list?: Array<{
-            title?: string | null,
+            title: string | null,
             items: string[]
         }> | undefined,
         colors: {

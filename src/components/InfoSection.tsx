@@ -131,7 +131,7 @@ export const InfoSection = () => {
         <div className={"py-0.5 leading-5"}>{children}</div>
     )
 
-    const List = ({items, title}: { items: string[], title?: string }) => {
+    const List = ({items, title}: { items: string[], title: string | null }) => {
         return (
             <div className="text-left py-4">
                 {title && <h2 className="font-bold">{title}</h2>}
@@ -209,26 +209,18 @@ export const InfoSection = () => {
                                 </Text>
                             ))}
 
-                            {list?.length && list.map((list: {
-                                title: string | null,
-                                items: string[]
-                            }, index) => (
-                                {
+                            {list?.length && list.map(({title, items}, index) => (
+                                <List key={index} title={title} items={items}/>)
+                            )}
 
-                                    const {title, items} = list;
-
-                              return (<List key={index} title={title} items={items}/>)
-                        }
-                        ))}
-
-                        {text2?.length && text2.map((text, index) => (
-                            <Text key={index}>
-                                {parse(text)}
-                            </Text>
-                        ))}
-                    </div>
+                            {text2?.length && text2.map((text, index) => (
+                                <Text key={index}>
+                                    {parse(text)}
+                                </Text>
+                            ))}
+                        </div>
                     </Panels>
-                    ))}
+                ))}
             </div>
             <ProgressBar/>
         </section>
