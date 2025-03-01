@@ -1,43 +1,58 @@
+"use client";
+
+import Image from "next/image";
+import {useContext} from "react";
+import {LanguageContext} from "@services/LanguageProvider";
+import AboutMePic from "@assets/rolam.jpg";
+
 export const AboutMeSection = () => {
+    const {
+        languageData: {
+            aboutMe
+        }
+    } = useContext(LanguageContext);
+
+    const {
+        quote,
+        phrase1,
+        phrase2,
+        phrase3,
+        phrase4
+    } = aboutMe;
 
     return (
-        <div id="about-me" className="bg-gradient-to-r from-[--darkRed] via-red-400 to-[--lightRed] max-w-1/2 margin-auto">
-            <div className={"flex pt-8 bg-transparent"}>
+        <div id="about-me-section"
+             className="bg-gradient-to-r from-[--darkRed] via-red-800 to-[--lightRed] w-full margin-auto p-12">
+            <div
+                className="flex bg-transparent justify-center items-start w-full relative">
                 <div
-                    className="flex basis-[600px] flex-col gap-8 text-2xl whitespace-pre-wrap px-8 leading-[1.8] tracking-widest text-white">
+                    className="flex flex-1 flex-col gap-4 text-xl leading-[1.8] lg:max-w-[600px] sm:w-full tracking-widest overflow-auto text-white">
                     <div>“
                         <strong>
-                            Juj, de szépen rajzolsz!
-                            Tudnál nekem is?
-                        </strong>” – talán ez volt a legmotiválóbb mondat egész gyerekkoromtól kezdve. A suliban
-                        mindig alig vártam a rajzórát, a szünetet, olyankor lehettem igazán az osztály fénypontja.
-                        Valahogy
-                        innen indult ez az egész, a fekete filctollal rajzolt tigrisektől.
+                            {quote}
+                        </strong>”
+
+                        {phrase1}
                     </div>
 
-                    <div>
-                        Később elindultam a nehézkes, képzések nélküli kezdetleges hazai tetováló világban, rajzolt
-                        mintás mappával és rendíthetetlen szándékkal, 17 évesen. Sokan elküldtek, páran segítettek, a
-                        balatoni szezonokban már egész közel engedtek a tűzhöz. Először hivatalosan tetoválóként a
-                        Celtic Moon Tattoo csapatában kezdhettem dolgozni, ekkor James mellett dolgozva, tőle
-                        tanulhattam meg igazán ezt a csodás szakmát.
-                    </div>
-
-                    <div>
-                        Művészeti iskolák híjján rengeteg mindent a tetováláson keresztül ismertem meg, de talán még
-                        önmagamat is.
-                    </div>
+                    {[phrase2, phrase3, phrase4].map((phrase, index) => (
+                        <div key={index}>
+                            {phrase}
+                        </div>
+                    ))}
                 </div>
 
-                <div className={"relative bg-transparent p-8 overflow-hidden"}>
-                    <div className={"red-bg w-100 h-1/4 bg-[--darkRed] absolute -right-3 -top-3"}/>
-                    {<img src="/assets/rolam.jpg" alt="about me" className="object-cover h-full"/>}
-                </div>
-            </div>
+                <div className={"relative flex-1 px-8 self-center"}>
+                    <div className={"red-bg w-100 h-40 bg-[--darkRed] absolute -right-12 -top-12"}/>
+                    <Image
+                        src={AboutMePic}
+                        alt="about me"
 
-            <div className="text-center px-8 text-2xl">
-                Azóta eltelt sok év és már a saját stúdiómban dolgozom, néha külföldön vendégtetoválok és nagyon boldog
-                vagyok, hogy tetováló lehetek. 😸
+                        className="object-cotnain h-full"
+                        loading={"lazy"}
+                        sizes={"(max-width: 900px) 100vw, 600px"}
+                    />
+                </div>
             </div>
         </div>
     )

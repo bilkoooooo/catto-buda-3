@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -14,11 +13,6 @@
     --lightRed: #BE3144;
 }
 
-@theme {
-    --primaryDark: #09122C;
-    --darkRed: #872341;
-    --lightRed: #BE3144;
-}
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -27,12 +21,27 @@
     }
 }
 
+html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
     transition: .3s;
+
+    #logo-section,
+    #header-section,
+    #video-section,
+    #about-me-section,
+    #info-section,
+    #gallery-section {
+        min-height: 100vh;
+        scroll-snap-align: start;
+    }
 
     &:has(.side-bar-open) {
         overflow: hidden;
@@ -54,4 +63,12 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--lightRed);
+}
+
+#logo-section {
+    font-family: "Bebas Neue", serif;
+}
+
+section.panel {
+    /*max-width: 1280px;*/
 }

@@ -11,30 +11,38 @@ export const LogoSection = () => {
         const scrollAnim = gsap.timeline({
             scrollTrigger: {
                 scrub: 1,
-                pin: true,
-                trigger: '#top-container',
+                pin: false,
+                trigger: '#container',
                 start: "top top",
                 endTrigger: "#top-section",
-                end: "+=100",
+                end: "+=150",
             },
         });
 
         scrollAnim
             .to('#logo-section #text', {
                 ease: 'power1.inOut',
-                y: '4rem',
+                y: '8rem',
+                duration: 0.5,
                 opacity: 0,
-            });
+            }).to(
+            '#logo-section',
+            {
+                ease: 'power1.inOut',
+                duration: 0.5,
+                display: 'none',
+            },
+        );
     });
 
     return (
-        <div id="logo-section" className="flex flex-col center justify-center text-center z-40 w-full">
-            <div className="uppercase flex flex-col z-10 text-7xl basis-1/3">
-                <div id={"text"}
-                     className="text-transparent text-stroke-1-2 text-stroke-lightRed  line-clamp-1 whitespace-normal">Kis
-                    Brigi Tattoo
-                </div>
+        <section id="logo-section"
+             className="flex center justify-center items-center text-center z-40 w-full min-h-0 h-screen fixed inset-0 m-0">
+            <div id={"text"} className="text-8xl uppercase min-h-0">
+                Kis Brigi
+                <br/>
+                <strong>Tattoo</strong>
             </div>
-        </div>
+        </section>
     )
 }

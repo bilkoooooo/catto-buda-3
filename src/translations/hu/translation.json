@@ -1,9 +1,218 @@
 {
-  "menu": {
-    "home": "Kezdőlap",
-    "about": "Rólunk",
-    "services": "Szolgáltatások",
-    "contact": "Kapcsolat",
-    "menu": "Menü"
-  }
+  "site": {
+    "title": "Kis Brigi Tattoo",
+    "description": "Kézműves ékszerek készítése, értékesítése"
+  },
+  "navbar": {
+    "menu": "Menü",
+    "contact": "Kapcsolat"
+  },
+  "sidebar": {
+    "gallery": "Galéria",
+    "about": "Rólam",
+    "booking": "Foglalás",
+    "info": "Tudnivalók"
+  },
+  "aboutMe": {
+    "quote": "Juj, de szépen rajzolsz!\n Tudnál nekem is?",
+    "phrase1": "– talán ez volt a legmotiválóbb mondat egész gyerekkoromtól kezdve. A suliban\n mindig alig vártam a rajzórát, a szünetet, olyankor lehettem igazán az osztály fénypontja.\n Valahogy innen indult ez az egész, a fekete filctollal rajzolt tigrisektől.",
+    "phrase2": "Később elindultam a nehézkes, képzések nélküli kezdetleges hazai tetováló világban, rajzolt  mintás mappával és rendíthetetlen szándékkal, 17 évesen. Sokan elküldtek, páran segítettek, abalatoni szezonokban már egész közel engedtek a tűzhöz. Először hivatalosan tetoválóként a Celtic Moon Tattoo csapatában kezdhettem dolgozni, ekkor James mellett dolgozva, tőle tanulhattam meg igazán ezt a csodás szakmát.",
+    "phrase3": "Művészeti iskolák híjján rengeteg mindent a tetováláson keresztül ismertem meg, de talán még önmagamat is.",
+    "phrase4": "Azóta eltelt sok év és már a saját stúdiómban dolgozom, néha külföldön vendégtetoválok és nagyon boldog\n                vagyok, hogy tetováló lehetek. \uD83D\uDE38"
+  },
+  "info": [
+    {
+      "title": "Tudnivalók",
+      "text": [
+        "Egy nap egy vendég \n-Hogy néz ki nálam egy munkafolyamat?"
+      ],
+      "colors": {
+        "background": {
+          "from": "#FF0000",
+          "to": "#FF7F00"
+        }
+      }
+    },
+    {
+      "title": "Tervezés.",
+      "text": [
+        "1 órakor találkozunk az üzletben, leülünk és kicsit beszélgetünk. Megkérdezem mit szeretnéltetováltatni, mi az elképzelés, van-e konkrét kép, vagy csak példák, esetleg egyik sem.Megesikhogy a hozott képek nem a legjobb minőségűek, vagy nem annyira kifejezőek a kért témához,ilyenkor segítek, ajánlok jobb ötleteket.",
+        "Egy szép kép lehet mutatós a falon, de nem feltétlen áll jól tetoválásként.",
+        "Beszélgetés közben elkészítem a tervet (kézzel rajzolok, vagy számítógépen szerkesztek) Ez akár 1-2 órát is igénybe vehet, de addig kicsit megismerlek és jobban személyre szabott lesz a végeredmény.",
+        "Amikor elkészül a terv és mindketten elégedettek vagyunk vele, nekikezdünk a tetoválásnak."
+      ],
+      "colors": {
+        "background": {
+          "from": "#FF7F00",
+          "to": "#FFFF00"
+        }
+      }
+    },
+    {
+      "title": "Tetoválás.",
+      "text": [
+        "Nagyjából óránként szünetet tartunk, tudunk enni, inni (az üzletemben konyha is van,hűtővel,mikróval) tehát lehet hozni, de rendelni is ételt. Ez fontos, mert általában 4-6 órát nálam töltesz, nem érdemes éhesen maradni, mert rosszul lehetsz!",
+        "Fájdalomcsillapításra hozhatsz magaddal gyógyszert amit ismersz, ha van ami bevált (Flector,Advil, Cataflam stb.) Lidocain tartalmú érzéstelenítőket nem használok, ha ilyesmivel készülsz kérlek beszéljük meg.",
+        "Ami sokkal fontosabb, hogy kipihenve, lelkileg felkészülve gyere!"
+      ],
+      "colors": {
+        "background": {
+          "from": "#FFFF00",
+          "to": "#00FF00",
+          "via": ""
+        }
+      }
+    },
+    {
+      "title": "Befejezés.",
+      "text": [
+        "Amikor elkészül a mű, vagy az aznapra tervezett folytatás, a tetoválásod fertőtlenítős szappannal lemosom és lefotózom (az internetre ezek a képek felkerülhetnek, portfólióként használom, természetesen arc és név nélkül, social media-kon nem jelölök meg senkit).",
+        "Utána egy úgynevezett Dry lock pad tetoválásra tervezett pelenkával lefedem, az utókezelést megbeszéljük és azt kinyomtatva oda is adom."
+      ],
+      "colors": {
+        "background": {
+          "from": "#00FF00",
+          "to": "#00FFFF"
+        }
+      }
+    },
+    {
+      "title": "Utókezelés.",
+      "text": [
+        "A tetováltatást védő pelenka (dry lock pad) 8 óra elteltével vehető le, utána a tetovált felületet mossuk le vízzel, esetleg fertőtlenítő szappannal is.",
+        "Ne használjunk törölközőt a szárításhoz! Hagyjuk lehetőség szerint megszáradni, majd vékonyan krémezzük be Bepanhten krémmel (a kenőcsöt nem ajánlom, mert túl zsíros, nem szívódik fel). A vékonyan azt jelenti, hogy ne álljon a bőrfelületen fölösleges krém! (más hámosító krémet csak a Bepanthenre való allergia esetén, előzetesen egyeztetve használjunk)",
+        "Napi 3x krémezzük, tiszta kézzel!",
+        "<span className=\"bg-lime-600\">1-1,5 hétig maximum.</span>",
+        "Utána testápolóval érdemes még a bőrt ápolni."
+      ],
+      "colors": {
+        "background": {
+          "from": "#00FFFF",
+          "to": "#0000FF"
+        }
+      },
+      "list": [
+        {
+          "title": "TILOS (az első 2-3 nap):",
+          "items": [
+            "erősen megizzadni",
+            "a sebet piszkálni, fertőzésnek kitenni"
+          ]
+        },
+        {
+          "title": "(2-3 hét): ",
+          "items": [
+            "áztatni",
+            "szaunázni",
+            "szoláriumozni/napoztatni",
+            "vakarni (normális ha viszket, ez a sebgyógyulás miatt van)",
+            "hámlás közben csipkedni",
+            "többet krémezni az előírtnál"
+          ],
+          "colors": {
+            "background": {
+              "from": "#0000FF",
+              "to": "#4B0082"
+            }
+          }
+        }
+      ],
+      "text2": [
+        "Hosszú távon minden tetoválásnak árt a nap UV sugárzása, így ajánlott a szolárium és napoztatás kerülése a tetovált részen, illetve magas faktorszámú naptej használata.",
+        "A tetoválás után a bőr hámrétege 6 hónapig regenerálódik, tehát addig nem olyan vastag és nem ad akkora védelmet a testnek, mint az ép bőr! Ilyenkor a naptól takarva kell védeni, a naptej nem elegendő!",
+        "<div> Bármi gond van, szóljunk, kérdezzünk!!! </div>"
+      ]
+    },
+    {
+      "title": "Anyagiak.",
+      "text": [
+        "Igyekeztem egy igazságos árszabást kitalálni, ami az óradíj és a napidíj között mozog, így kisebb* és nagyobb tetoválásokkal is meg tudtok engem keresni.",
+        "Tervezés – 5ezer ft/ óra",
+        "Tetoválás – 20ezer ft/ óra",
+        "Minimum napi díj – 50ezer ft",
+        "Maximum napi díj – 100ezer ft"
+      ],
+      "colors": {
+        "background": {
+          "from": "#4B0082",
+          "to": "#8B00FF"
+        }
+      }
+    },
+    {
+      "title": "Milyen kérésekkel válassz engem?",
+      "text": [
+        "Mivel régóta tetoválok, munkásságom sokoldalú, nem specializálódtam szigorúan egy-egy stílusra. Persze nekem is vannak testhez (lélekhez) állóbb feladatok, így ezeket előnyben fogom részesíteni és lesz olyan kérés amit elutasítok.",
+        "Ami nekem való:",
+        "Élő dolgok – állatok, emberek, kitalált lények.",
+        "'Stílusában'- realisztikus (élethű), szürreális, meseszerű (rajzos, akár képregényes)",
+        "Tetszenek az új trendek is! *",
+        "Színes és fekete fehér munkákat egyaránt szívesen készítek.",
+        "Ami nem nekem való:",
+        "Hagyományos törzsi minták – maori, japán (ezeknek a történelemmel bíró mintáknak komoly szimbólumrendszere van, amiknek a jelentéséről keveset tudok)",
+        "Horrorisztikus vagy negatív témák.",
+        "Amit nem fogok elvállalni:",
+        "Más tetováló munkájának folytatása, javítása, takarása.",
+        "Takarást csak nagyon egyedi esetekben, ha úgy látom teljes értékű végeredményt tudok rá alkotni. (Itt gyakran ajánlom előbb a lézeres halványítást, ami sok idő lehet, de sokkal szebb megoldásokat tudok tervezni rá.)",
+        "Feliratokat, pici (pár centis tetoválásokat).",
+        "*Ha több kisebb tetoválást készíthetek egy napon egy vendégre, az természetesen megoldható."
+      ],
+      "colors": {
+        "background": {
+          "from": "#8B00FF",
+          "to": "#FF0080"
+        }
+      }
+    },
+    {
+      "title": "Miért fontos a türelmed?",
+      "text": [
+        "Az évek alatt sokan megszerettétek a munkáim és egyre többen kerestek meg. Én ennek nagyon örülök, mert minden nap boldogan alkothatok és kiteljesedhetek. Ami viszont nehéz feladat, hogy az időm hatékonyan osszam be.",
+        "A tetoválás nem egy kiló kenyér, én pedig minden feladatra egyedül vagyok."
+      ],
+      "text2": [
+        "Tehát Augusztusban és Decemberben érdemes nekem írni, mert olyankor tudok vele érdemben foglalkozni."
+      ],
+      "list": [
+        {
+          "title": "Ezért a következő rendszer szerint dolgozom:",
+          "items": [
+            "csak e-mailben lehet hozzám bejelentkezni",
+            "Augusztusban adom ki az időpontokat Szeptembertől Januárig",
+            "Decemberben adom ki Januártól Májusig",
+            "nyáron keveset dolgozom egyéni megbeszélés alapján, ennek két technikai oka van: pihenek, illetve a nyári nap szinte teljesen tönkreteszi a friss munkám"
+          ]
+        }
+      ],
+      "colors": {
+        "background": {
+          "from": "#FF0080",
+          "to": "#FF0000"
+        }
+      }
+    },
+    {
+      "title": "Mikorra tudsz időpontot adni, mekkora a várólista?",
+      "text": [],
+      "list": [
+        {
+          "title": null,
+          "items": [
+            "nem tudom",
+            "ha nem kaptál időpontot, esetleg választ a leveledre, kérlek ne sértődj meg, ha biztos vagy benne, hogy szívesen vállalnám a kérésed, írj újra! Elképzelhető, hogy nem vettem észre, nem kerültél sorra stb.",
+            "amikor újra megnyitom a naptáram, mindig először azokat a vendégeim fogom beírni akiknek még félkész a tetoválása, vagy le kellett mondani az időpontját (pl. betegség miatt)"
+          ]
+        }
+      ],
+      "text2": [
+        "Ha ezt mind elolvastad máris sokat segítettél a munkámban, hogy mégtöbb időt tölthessek tetoválással! \uD83D\uDE42"
+      ],
+      "colors": {
+        "background": {
+          "from": "#FF0000",
+          "to": "#FF7F00"
+        }
+      }
+    }
+  ]
 }
