@@ -1,22 +1,30 @@
 "use client";
 
 import {getAllFiles} from "@services/GetAllImages";
-import {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ImageViewerComponent} from "@components/ImageViewerComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const GallerySection = () => {
-    const [files, setFiles] = useState<string[]>([]);
-
+    const [images, setImage] = useState<HTMLImageElement[]>([]);
+    const [imageToShow, setImageToShow] = useState<number | null>(null)
     const galleryRef = useRef<HTMLDivElement | null>(null);
 
 
     useEffect(() => {
-        getAllFiles().then(files => setFiles(files));
+        getAllFiles().then(images => {
+            images.forEach((image) => {
+                import (`public/gallery/${image}`).then((img) => setImage(images => [...images, {
+                    ...img.default,
+                    id: image
+                }]))
+            })
+        });
     }, []);
 
     useGSAP(() => {
@@ -37,42 +45,46 @@ export const GallerySection = () => {
                 duration: 0.75,
             });
         });
-    }, [files]);
+    }, [images]);
 
-    const onImageLoad = (image, index) => {
-        gsap.to(image, {
+    const onImageLoad = (event: React.SyntheticEvent, index: number) => {
+        gsap.to(event.currentTarget, {
             opacity: 1,
             duration: 0.75,
             delay: index * 0.2,
             scrollTrigger: {
                 trigger: galleryRef.current,
-                start: "top top",
+                start: "-=100",
+                end: "bottom bottom",
                 // toggleActions: "play none none reverse",
-                markers: true
+                // markers: true
             }
         });
     }
 
-    const ImageList = () => <div id={"img-gallery"}
-                                 className={"flex basis-full flex-shrink-0 items-center justify-center gap-2"}>
-        {files.slice(0, 4).map((file, index) => (
-            <div key={index} className={"relative w-1/4 h-1/4 image"}>
-                {file}
-                <Image
-                    loading={"lazy"}
-                    fill={true}
-                    quality={100}
-                    sizes="(max-width: 768px) 200px, (max-width: 1200px) 50vw, 33vw"
-                    src={`/gallery/${file}`}
-                    alt={file}
-                    onLoad={(e) => onImageLoad(e.target, index)}
-                    className={"grayscale hover:grayscale-0 duration-300 opacity-0"}/>
-            </div>
-        ))}
-    </div>;
+    const ImageList = () => (
+        <div id={"img-gallery"} className={"lg:columns-4 md:columns-3 sm:columns2"}>
+            {images.map((image, index) => {
+                const {src, id, height, width} = image;
+                return (
+                    <Image
+                        key={id}
+                        loading={"lazy"}
+                        quality={100}
+                        height={height}
+                        width={width}
+                        sizes="(max-width: 768px) 200px, (max-width: 1200px) 50vw, 33vw"
+                        src={src}
+                        id={id}
+                        alt={id}
+                        onLoad={(event) => onImageLoad(event, index)}
+                        className={"grayscale hover:grayscale-0 opacity-0 duration-300 image py-2"}/>
+                )
+            })}
+        </div>);
 
     const SelfPromo = () => (
-        <div className={"self-promo flex absolute inset-x-0 top-[10%] justify-center items-center -translate-x-full"}>
+        <div className={"self-promo flex justify-center items-center -translate-x-full"}>
             <div>
                 További képekért látogass el a <a href={"/gallery"}>galériába</a>
             </div>
@@ -83,11 +95,12 @@ export const GallerySection = () => {
         </div>
     )
 
-
     return (
-        <div id="gallery-section" ref={galleryRef} className=" flex flex-col w-screen h-screen gap-2 relative">
+        <div id="gallery-section" ref={galleryRef} className="w-screen min-h-screen relative">
             {<ImageList/>}
             <SelfPromo/>
+
+            {imageToShow && <ImageViewerComponent imgIndex={imageToShow} images={images} onClose={() => setImageToShow(null)}/>}
         </div>
     );
 }

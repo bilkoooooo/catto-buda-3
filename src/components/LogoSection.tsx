@@ -22,8 +22,8 @@ export const LogoSection = () => {
         scrollAnim
             .to('#logo-section #text', {
                 ease: 'power1.inOut',
-                y: '8rem',
-                duration: 0.5,
+                yPercent: 100,
+                duration: 0.75,
                 opacity: 0,
             }).to(
             '#logo-section',
@@ -39,8 +39,7 @@ export const LogoSection = () => {
         <section id="logo-section"
              className="flex center justify-center items-center text-center z-40 w-full min-h-0 h-screen fixed inset-0 m-0">
             <div id={"text"} className="text-8xl uppercase min-h-0">
-                Kis Brigi
-                <br/>
+                Kis Brigi<br/>
                 <strong>Tattoo</strong>
             </div>
         </section>

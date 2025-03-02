@@ -50,7 +50,7 @@ export default function Navbar() {
     return (
         <nav id="navbar"
              ref={navbarRef}
-             className="fixed max-w-full w-full top-0 z-[60] justify-between duration-500 text-white backdrop-blur">
+             className="fixed max-w-full w-full top-0 z-[60] justify-between duration-500 text-white ">
             <div className="mx-auto py-3 sm:px-6 lg:px-14">
                 <div className="relative flex items-center">
                     <div className="flex flex-1 h-full items-center justify-between">
