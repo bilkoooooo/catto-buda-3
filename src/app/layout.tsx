@@ -4,18 +4,21 @@ import React from "react";
 import MenuStateProvider from "@services/MenuStateProvider";
 import Sidebar from "@components/Sidebar";
 import {LanguageProvider} from "@services/LanguageProvider";
+import {UserDeviceProvider} from "@services/UserDeviceProvider";
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="hu">
         <body>
-        <LanguageProvider>
-            <MenuStateProvider>
-                <Navbar/>
-                <Sidebar/>
-                {children}
-            </MenuStateProvider>
-        </LanguageProvider>
+        <UserDeviceProvider>
+            <LanguageProvider>
+                <MenuStateProvider>
+                    <Navbar/>
+                    <Sidebar/>
+                    {children}
+                </MenuStateProvider>
+            </LanguageProvider>
+        </UserDeviceProvider>
         </body>
         </html>
     );

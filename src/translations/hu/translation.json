@@ -18,13 +18,14 @@
     "phrase1": "– talán ez volt a legmotiválóbb mondat egész gyerekkoromtól kezdve. A suliban\n mindig alig vártam a rajzórát, a szünetet, olyankor lehettem igazán az osztály fénypontja.\n Valahogy innen indult ez az egész, a fekete filctollal rajzolt tigrisektől.",
     "phrase2": "Később elindultam a nehézkes, képzések nélküli kezdetleges hazai tetováló világban, rajzolt  mintás mappával és rendíthetetlen szándékkal, 17 évesen. Sokan elküldtek, páran segítettek, abalatoni szezonokban már egész közel engedtek a tűzhöz. Először hivatalosan tetoválóként a Celtic Moon Tattoo csapatában kezdhettem dolgozni, ekkor James mellett dolgozva, tőle tanulhattam meg igazán ezt a csodás szakmát.",
     "phrase3": "Művészeti iskolák híjján rengeteg mindent a tetováláson keresztül ismertem meg, de talán még önmagamat is.",
-    "phrase4": "Azóta eltelt sok év és már a saját stúdiómban dolgozom, néha külföldön vendégtetoválok és nagyon boldog\n                vagyok, hogy tetováló lehetek. \uD83D\uDE38"
+    "phrase4": "Azóta eltelt sok év és már a saját stúdiómban dolgozom, néha külföldön vendégtetoválok és nagyon boldog vagyok, hogy tetováló lehetek. \uD83D\uDE38"
   },
   "info": [
     {
       "title": "Tudnivalók",
+      "summary": "Egy nap egy vendég <br> -Hogy néz ki nálam egy munkafolyamat?",
       "text": [
-        "Egy nap egy vendég \n-Hogy néz ki nálam egy munkafolyamat?"
+        "Egy nap egy vendég \n -Hogy néz ki nálam egy munkafolyamat?"
       ],
       "colors": {
         "background": {
@@ -35,8 +36,9 @@
     },
     {
       "title": "Tervezés.",
+      "summary": "<p>11 órakor találkozunk az üzletben, megbeszéljük az elképzeléseket. <br>Beszélgetés közben elkészítem a tervet, hogy személyre szabottabb legyen a végeredmény.</p> <p> Amikor mindketten elégedettek vagyunk a tervvel, megkezdődik a tényleges tetoválás.</p>",
       "text": [
-        "1 órakor találkozunk az üzletben, leülünk és kicsit beszélgetünk. Megkérdezem mit szeretnéltetováltatni, mi az elképzelés, van-e konkrét kép, vagy csak példák, esetleg egyik sem.Megesikhogy a hozott képek nem a legjobb minőségűek, vagy nem annyira kifejezőek a kért témához,ilyenkor segítek, ajánlok jobb ötleteket.",
+        "11 órakor találkozunk az üzletben, leülünk és kicsit beszélgetünk. Megkérdezem mit szeretnéltetováltatni, mi az elképzelés, van-e konkrét kép, vagy csak példák, esetleg egyik sem.Megesikhogy a hozott képek nem a legjobb minőségűek, vagy nem annyira kifejezőek a kért témához,ilyenkor segítek, ajánlok jobb ötleteket.",
         "Egy szép kép lehet mutatós a falon, de nem feltétlen áll jól tetoválásként.",
         "Beszélgetés közben elkészítem a tervet (kézzel rajzolok, vagy számítógépen szerkesztek) Ez akár 1-2 órát is igénybe vehet, de addig kicsit megismerlek és jobban személyre szabott lesz a végeredmény.",
         "Amikor elkészül a terv és mindketten elégedettek vagyunk vele, nekikezdünk a tetoválásnak."
@@ -50,6 +52,7 @@
     },
     {
       "title": "Tetoválás.",
+      "summary": "<p>Óránként szünetet tartunk, tudunk enni, inni. Ez fontos, mert általában 4-6 órát nálam töltesz.</p> <p> Fájdalomcsillapításra hozhatsz magaddal gyógyszert amit ismersz, de beszéljünk róla. </p>",
       "text": [
         "Nagyjából óránként szünetet tartunk, tudunk enni, inni (az üzletemben konyha is van,hűtővel,mikróval) tehát lehet hozni, de rendelni is ételt. Ez fontos, mert általában 4-6 órát nálam töltesz, nem érdemes éhesen maradni, mert rosszul lehetsz!",
         "Fájdalomcsillapításra hozhatsz magaddal gyógyszert amit ismersz, ha van ami bevált (Flector,Advil, Cataflam stb.) Lidocain tartalmú érzéstelenítőket nem használok, ha ilyesmivel készülsz kérlek beszéljük meg.",
@@ -65,6 +68,7 @@
     },
     {
       "title": "Befejezés.",
+      "summary": "Nap végén a tetoválásod fertőtlenítős szappannal lemosom és utána egy úgynevezett Dry lock pad tetoválásra tervezett pelenkával lefedem, ezt követően megbeszéljük az utókezelést.",
       "text": [
         "Amikor elkészül a mű, vagy az aznapra tervezett folytatás, a tetoválásod fertőtlenítős szappannal lemosom és lefotózom (az internetre ezek a képek felkerülhetnek, portfólióként használom, természetesen arc és név nélkül, social media-kon nem jelölök meg senkit).",
         "Utána egy úgynevezett Dry lock pad tetoválásra tervezett pelenkával lefedem, az utókezelést megbeszéljük és azt kinyomtatva oda is adom."
@@ -78,6 +82,7 @@
     },
     {
       "title": "Utókezelés.",
+      "summary": "A tetováltatást védő pelenka 8 óra elteltével vehető le, utána a tetovált felületet mossuk le vízzel, esetleg fertőtlenítő szappannal is. \n Majd naponta 3x Bepanhten krémmel  kenjük be, tiszta kézzel. 1-1,5 hétig.",
       "text": [
         "A tetováltatást védő pelenka (dry lock pad) 8 óra elteltével vehető le, utána a tetovált felületet mossuk le vízzel, esetleg fertőtlenítő szappannal is.",
         "Ne használjunk törölközőt a szárításhoz! Hagyjuk lehetőség szerint megszáradni, majd vékonyan krémezzük be Bepanhten krémmel (a kenőcsöt nem ajánlom, mert túl zsíros, nem szívódik fel). A vékonyan azt jelenti, hogy ne álljon a bőrfelületen fölösleges krém! (más hámosító krémet csak a Bepanthenre való allergia esetén, előzetesen egyeztetve használjunk)",
@@ -125,6 +130,7 @@
     },
     {
       "title": "Anyagiak.",
+      "summary": "Tervezés – 5ezer ft/ óra <br> Tetoválás – 20ezer ft/ óra <br> Minimum napi díj – 50ezer ft / Maximum napi díj – 100ezer ft",
       "text": [
         "Igyekeztem egy igazságos árszabást kitalálni, ami az óradíj és a napidíj között mozog, így kisebb* és nagyobb tetoválásokkal is meg tudtok engem keresni.",
         "Tervezés – 5ezer ft/ óra",
@@ -142,6 +148,7 @@
     {
       "id": "requests",
       "title": "Milyen kérésekkel válassz engem?",
+      "summary": "<p> <b>Ami nekem való: </b> Élő dolgok – állatok, emberek, kitalált lények. 'Stílusában'- realisztikus (élethű), szürreális, meseszerű (rajzos, akár képregényes).  Tetszenek az új trendek is! * Színes és fekete fehér munkákat egyaránt szívesen készítek. </p> <p> <b>Ami nem nekem való:</b> Hagyományos törzsi minták – maori, japán (ezeknek a történelemmel bíró mintáknak komoly szimbólumrendszere van, amiknek a jelentéséről keveset tudok) </br> Horrorisztikus vagy negatív témák. </p> <p><b>Amit nem fogok elvállalni:</b> Más tetováló munkájának folytatása, javítása, takarása. </br> Takarást csak nagyon egyedi esetekben, ha úgy látom teljes értékű végeredményt tudok rá alkotni. (Itt gyakran ajánlom előbb a lézeres halványítást, ami sok idő lehet, de sokkal szebb megoldásokat tudok tervezni rá.) </br> Feliratokat, pici (pár centis tetoválásokat). </br> *Ha több kisebb tetoválást készíthetek egy napon egy vendégre, az természetesen megoldható.</p>",
       "text": [
         "<div>Mivel régóta tetoválok, munkásságom sokoldalú, nem specializálódtam szigorúan egy-egy stílusra. Persze nekem is vannak testhez (lélekhez) állóbb feladatok, így ezeket előnyben fogom részesíteni és lesz olyan kérés amit elutasítok. </div>",
         "<div>Ami nekem való:  </div> ",
@@ -160,6 +167,7 @@
     },
     {
       "title": "Miért fontos a türelmed?",
+      "summary": "<p>Csak e-mailben lehet hozzám bejelentkezni.</p> <p> <b>Augusztusban</b> adom ki az időpontokat <b>Szeptembertől</b> <b>Januárig</b>. <br> <b>Decemberben</b> peidg <b>Januártól</b> <b>Májusig</b> <p> Nyáron keveset dolgozom egyéni megbeszélés alapján, ennek két technikai oka van: pihenek, illetve a nyári nap szinte teljesen tönkreteszi a friss munkám </p>",
       "text": [
         "Az évek alatt sokan megszerettétek a munkáim és egyre többen kerestek meg. Én ennek nagyon örülök, mert minden nap boldogan alkothatok és kiteljesedhetek. Ami viszont nehéz feladat, hogy az időm hatékonyan osszam be.",
         "A tetoválás nem egy kiló kenyér, én pedig minden feladatra egyedül vagyok."
@@ -186,7 +194,9 @@
       }
     },
     {
-      "title": "Mikorra tudsz időpontot adni, mekkora a várólista?",
+      "title": "\"Mikorra tudsz időpontot adni, mekkora a várólista?\"",
+      "summary": "",
+      "neededOnInfo": false,
       "text": [],
       "list": [
         {

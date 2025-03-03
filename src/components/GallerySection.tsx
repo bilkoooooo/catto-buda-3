@@ -68,14 +68,14 @@ export const GallerySection = () => {
                 const {src, id, height, width} = image;
                 return (
                     <Image
-                        key={id}
+                        key={"gallery_"+id}
                         loading={"lazy"}
                         quality={100}
                         height={height}
                         width={width}
                         sizes="(max-width: 768px) 200px, (max-width: 1200px) 50vw, 33vw"
                         src={src}
-                        id={id}
+                        id={"gallery_"+ id}
                         alt={id}
                         onLoad={(event) => onImageLoad(event, index)}
                         className={"grayscale hover:grayscale-0 opacity-0 duration-300 image py-2"}/>
@@ -97,7 +97,7 @@ export const GallerySection = () => {
 
     return (
         <div id="gallery-section" ref={galleryRef} className="w-screen min-h-screen relative">
-            {<ImageList/>}
+            {false && <ImageList/>}
             <SelfPromo/>
 
             {imageToShow && <ImageViewerComponent imgIndex={imageToShow} images={images} onClose={() => setImageToShow(null)}/>}

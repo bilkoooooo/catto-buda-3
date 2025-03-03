@@ -122,13 +122,13 @@ export const InfoSection = () => {
     );
 
     const Title = ({title}: { title: string }) => (
-        <div className="stroked-text text-[2.5rem] font-bold mb-4">
+        <div className="stroked-text text-[2rem] font-bold">
             {title}
         </div>
     )
 
     const Text = ({children}: { children: ReactNode }) => (
-        children
+        <div className="text-justify"> {children} </div>
     )
 
     const List = ({items, title}: { items: string[], title: string | null }) => {
@@ -145,21 +145,17 @@ export const InfoSection = () => {
     }
 
     interface PanelsProps {
-        id? : string,
-        children: ReactNode,
-        colors: { background: { from: string, to: string } }
+        id?: string,
+        children: ReactNode
     }
 
-    const Panels = ({children, colors, id}: PanelsProps) => {
-        const {background: {from, to}} = colors || {background: {from: 'black', to: 'black'}};
+    const Panels = ({children, id}: PanelsProps) => {
 
         return (
             <section
-                id={id}
-                style={{backgroundImage: `linear-gradient(to right, ${from}, ${to})`}}
-                className={cn(`panel grow-1 shrink-0 basis-full w-screen py-20 px-8 flex`)}>
+                id={id} className={cn(`panel grow-1 shrink-0 basis-full w-screen py-20 px-8 flex`)}>
                 <div
-                    className="basis-full h-fit bg-white bg-opacity-40 self-center backdrop-blur-lg p-8 rounded-lg drop-shadow-lg flex flex-col justify-start items-start gap-4 overflow-hidden [text-shadow:_2px_2px_10px_rgb(0_0_0_/_100%)]">
+                    className="basis-full h-fit min-h-64 bg-white bg-opacity-40 self-center justify-center backdrop-blur-lg p-8 rounded-lg drop-shadow-lg flex flex-col items-start gap-4 overflow-hidden [text-shadow:_2px_2px_10px_rgb(0_0_0_/_100%)]">
                     {children}
                 </div>
             </section>
@@ -197,30 +193,15 @@ export const InfoSection = () => {
         className={cn("progress-line h-2 bg-opacity-60 bg-[--lightRed] w-full absolute bottom-0 -left-full")}/>;
 
     return (
-        <section id="info-section" className={"relative"}>
+        <section id="info-section" className={"relative bg-gradient-to-r from-[--lightRed] to-[--darkRed]"}>
             <div ref={containerRef}
                  className="info-section flex flex-nowrap overscroll-none relative h-screen w-screen">
-                {Object.values(info).slice(6,7).map(({title, text, text2, list, colors, id}, index) => (
-                    <Panels key={index} colors={colors} id={id}>
+                {Object.values(info).slice(0,10).map(({title, summary, id}, index) => (
+                    <Panels key={index} id={id}>
                         <Title title={title}/>
-
-                        <div className="text-container">
-                            {text.map((text, index) => (
-                                <Text key={index}>
-                                    {parse(text)}
-                                </Text>
-                            ))}
-
-                            {list?.length && list.map(({title, items}, index) => (
-                                <List key={index} title={title} items={items}/>)
-                            )}
-
-                            {text2?.length && text2.map((text, index) => (
-                                <Text key={index}>
-                                    {parse(text)}
-                                </Text>
-                            ))}
-                        </div>
+                        {summary && <Text>
+                            {parse(summary)}
+                        </Text>}
                     </Panels>
                 ))}
             </div>

@@ -1,8 +1,9 @@
 'use client';
 
-import {createContext, ReactNode, useEffect, useState} from "react";
+import {createContext, ReactNode, useContext, useEffect, useState} from "react";
 import {ReadLanguageFile} from "@services/FileReader";
 import huTranslation from "@/src/translations/hu/translation.json";
+import {UserDeviceContext} from "@services/UserDeviceProvider";
 
 // type RecursiveStringRecord = {
 //     [key: string]: string | RecursiveStringRecord;
@@ -33,6 +34,7 @@ type LanguageDataType = {
     info: Array<{
         id?: string
         title: string,
+        summary?: string,
         text: string[],
         text2?: string[] | undefined,
         list?: Array<{
@@ -63,14 +65,19 @@ export const LanguageContext = createContext<LanguageContextType>({
 const DEFAULT_LANGUAGE_DATA = huTranslation;
 
 export const LanguageProvider = ({children}: { children: ReactNode }) => {
-    const [language, setLanguage] = useState('hu');
+    const userDevice = useContext(UserDeviceContext);
+
+    const [language, setLanguage] = useState(userDevice?.deviceLanguage ?? 'hu');
     const [languageData, setLanguageData] = useState(DEFAULT_LANGUAGE_DATA);
 
     useEffect(() => {
-        const langInStorage = localStorage.getItem('language') ?? 'hu';
-        setLanguage(langInStorage);
-        ReadLanguageFile({lang: langInStorage}).then(setLanguageData);
-    }, []);
+        const langInStorage = localStorage.getItem('language');
+        if (langInStorage) {
+            setLanguage(langInStorage);
+        }
+
+        ReadLanguageFile({lang: langInStorage ?? language}).then(setLanguageData);
+    }, [language,userDevice]);
 
     const changeLanguage = async (lang: string): Promise<void> => {
         setLanguage(lang);
