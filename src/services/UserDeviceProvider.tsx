@@ -31,9 +31,11 @@ export const UserDeviceContext = createContext<UserDeviceType>(null)
 export const UserDeviceProvider = ({children}: { children: ReactNode }) => {
     const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent
 
+    const getLanguageCode = (language: string): string => language.split('-')[0];
+
     return (
         <UserDeviceContext.Provider value={{
-            deviceLanguage: navigator.language || 'hu',
+            deviceLanguage: getLanguageCode(navigator.language) || 'hu',
             deviceType: getDeviceType(userAgent)
         }}>
             {children}

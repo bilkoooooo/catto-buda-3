@@ -72,6 +72,7 @@ body {
 section {
     .panel {
         max-width: 720px;
+        flex-basis: 66%;
     }
 
     #requests {
@@ -92,6 +93,16 @@ section {
                 max-width: 600px;
                 grid-area: a;
             }
+        }
+    }
+
+    #progress-bar {
+        svg {
+            height: 32px;
+            width: 32px;
+            /*border: 2px solid white;*/
+            border-radius: 50%;
+            padding: 5px;
         }
     }
 }

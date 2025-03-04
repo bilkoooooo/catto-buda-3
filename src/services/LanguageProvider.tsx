@@ -77,7 +77,7 @@ export const LanguageProvider = ({children}: { children: ReactNode }) => {
         }
 
         ReadLanguageFile({lang: langInStorage ?? language}).then(setLanguageData);
-    }, [language,userDevice]);
+    }, []);
 
     const changeLanguage = async (lang: string): Promise<void> => {
         setLanguage(lang);

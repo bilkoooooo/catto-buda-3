@@ -16,21 +16,24 @@ export default function Home() {
         }
     } = useContext(LanguageContext);
 
+    const Placeholder = () => <div className={"h-screen w-full"}/>;
+
     return (
         <>
             <title>{title}</title>
             <meta name="title" content={title}/>
             <div id="container" className="w-full relative">
-                {/*<LogoSection/>*/}
+                <LogoSection/>
 
-                {/*<HeaderSection/>*/}
+                <HeaderSection/>
 
-                {/*<VideoSection/>*/}
+                <VideoSection/>
 
-                {/*<AboutMeSection/>*/}
+                <AboutMeSection/>
 
+                {/*<Placeholder/>*/}
                 <InfoSection/>
-
+                {/*<Placeholder/>*/}
                 <GallerySection/>
             </div>
         </>
