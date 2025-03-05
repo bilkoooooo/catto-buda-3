@@ -53,40 +53,40 @@ type LanguageDataType = {
 interface LanguageContextType {
     language: string;
     changeLanguage: (lang: string) => Promise<void>;
-    languageData: LanguageDataType;
+    languageData?: {};
 }
 
 export const LanguageContext = createContext<LanguageContextType>({
     language: 'hu',
     changeLanguage: null as unknown as (lang: string) => Promise<void>,
-    languageData: {} as LanguageDataType
+    languageData: {}
 });
 
-const DEFAULT_LANGUAGE_DATA = huTranslation;
+// const DEFAULT_LANGUAGE_DATA = huTranslation;
 
 export const LanguageProvider = ({children}: { children: ReactNode }) => {
     const userDevice = useContext(UserDeviceContext);
 
     const [language, setLanguage] = useState(userDevice?.deviceLanguage ?? 'hu');
-    const [languageData, setLanguageData] = useState(DEFAULT_LANGUAGE_DATA);
+    const [languageData, setLanguageData] = useState({});
 
-    useEffect(() => {
-        const langInStorage = localStorage.getItem('language');
-        if (langInStorage) {
-            setLanguage(langInStorage);
-        }
-
-        ReadLanguageFile({lang: langInStorage ?? language}).then(setLanguageData);
-    }, []);
+    // useEffect(() => {
+    //     const langInStorage = localStorage.getItem('language');
+    //     if (langInStorage) {
+    //         setLanguage(langInStorage);
+    //     }
+    //
+    //     ReadLanguageFile({lang: langInStorage ?? language}).then(setLanguageData);
+    // }, []);
 
     const changeLanguage = async (lang: string): Promise<void> => {
         setLanguage(lang);
-        setLanguageData(await ReadLanguageFile({lang}));
+        // setLanguageData(await ReadLanguageFile({lang}));
         localStorage.setItem('language', lang);
     }
 
     return (
-        <LanguageContext.Provider value={{language, changeLanguage, languageData}}>
+        <LanguageContext.Provider value={{language, changeLanguage, languageData, setLanguageData}}>
             {children}
         </LanguageContext.Provider>
     )

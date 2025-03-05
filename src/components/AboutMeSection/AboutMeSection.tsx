@@ -1,53 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import {useContext, useRef} from "react";
+import {useContext, useEffect, useRef} from "react";
 import {LanguageContext} from "@services/LanguageProvider";
 import AboutMePic from "@assets/rolam.jpg";
-import gsap from 'gsap';
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {useGSAP} from "@gsap/react";
+import {useGSAPCustomHook} from "@components/AboutMeSection/useGSAPCustomHook";
+import {ReadLanguageFile} from "@services/FileReader";
 
 export const AboutMeSection = () => {
-    gsap.registerPlugin(ScrollTrigger);
-
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const {
-        languageData: {
-            aboutMe
-        }
-    } = useContext(LanguageContext);
+    const {language, languageData, setLanguageData} = useContext(LanguageContext);
 
-    useGSAP(() => {
-        if (!containerRef?.current || !(containerRef.current instanceof HTMLDivElement)) {
-            return null;
-        }
 
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: 'top top',
-                end: () => `+=${containerRef.current.offsetHeight}`,
-                scrub: 1,
-                pin: true,
-                markers: true
-            }
-        });
+    useEffect(() => {
+        ReadLanguageFile({dir: 'AboutMeSection', lang: language}).then(setLanguageData)
+    }, [language]);
 
-        timeline.to('#about-me-text', {
-            opacity: 1,
-            yPercent: -100,
-            duration: 1
-        })
-    }, [])
+    useGSAPCustomHook(containerRef);
 
-    const {
-        quote,
-        phrase1,
-        phrase2,
-        phrase3,
-        phrase4
-    } = aboutMe;
+    const {quote, phrase1, phrase2, phrase3, phrase4} = languageData || {};
 
     return (
         <div id="about-me-section"

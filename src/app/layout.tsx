@@ -13,8 +13,8 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <UserDeviceProvider>
             <LanguageProvider>
                 <MenuStateProvider>
-                    <Navbar/>
-                    <Sidebar/>
+                    {/*<Navbar/>*/}
+                    {/*<Sidebar/>*/}
                     {children}
                 </MenuStateProvider>
             </LanguageProvider>
