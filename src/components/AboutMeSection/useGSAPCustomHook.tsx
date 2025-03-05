@@ -11,12 +11,13 @@ export const useGSAPCustomHook = (containerRef: RefObject<HTMLDivElement | null>
         if (!containerRef?.current || !(containerRef.current instanceof HTMLDivElement)) {
             return null;
         }
+        const {current: container} = containerRef;
 
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: containerRef.current,
+                trigger: container,
                 start: 'top top',
-                end: () => `+=${containerRef.current.offsetHeight}`,
+                end: () => `+=${container.offsetHeight}`,
                 scrub: 1,
                 pin: true,
                 markers: true
