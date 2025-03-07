@@ -30,12 +30,11 @@ export default function Home() {
                 {/*<HeaderSection/>*/}
 
                 {/*<VideoSection/>*/}
-                <Placeholder/>
 
                 <AboutMeSection/>
 
                 <InfoSection/>
-                {/*<Placeholder/>*/}
+
                 {/*<GallerySection/>*/}
             </div>
         </>

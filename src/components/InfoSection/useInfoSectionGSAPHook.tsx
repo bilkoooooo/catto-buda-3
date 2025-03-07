@@ -1,6 +1,7 @@
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import {RefObject} from "react";
+import {addClass, hasClass, removeClass} from "@lib/utils";
 
 type RefType = RefObject<HTMLDivElement | null>;
 
@@ -24,14 +25,22 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
             const sections = gsap.utils.toArray(".panel");
             const sectionCount = sections.length;
 
+            const svgs = [...progressBarElem?.querySelectorAll('.icons svg')];
+
             const onCompleteSnapCallback = ({progress}: { progress: number }) => {
                 const activeIndex = Math.round(progress * (sectionCount - 1));
-                [...progressBarElem?.querySelectorAll('.icons svg')].splice(0, activeIndex + 1).forEach((icon) => {
-                    if (!icon.classList.contains('text-[--darkRed]')) {
-                        icon.classList.add('text-[--darkRed]', 'fill-[--lightRed]', 'bg-black');
+                // progressBarElem.value = progress * 100;
+
+                svgs.forEach((icon, index) => {
+                    removeClass(icon, 'active');
+
+                    if (index <= activeIndex) {
+                        addClass(icon, 'active');
                     }
                 });
             };
+
+            console.log(firstPanel.offsetWidth * (sectionCount - 1));
 
             const timeline = gsap.timeline({
                 scrollTrigger: {
@@ -44,6 +53,7 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                         duration: {min: 0.3, max: 2.5},
                         ease: "power1.inOut",
                     },
+                    markers: true,
                     end: () => "+=" + firstPanel.offsetWidth * (sectionCount - 1),
                     onSnapComplete: onCompleteSnapCallback,
                     onEnter: () => progressBarElem.classList.remove('hidden'),
@@ -52,7 +62,7 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                 ease: "none"
             });
 
-            gsap.set(sections, {xPercent: 0});
+            // gsap.set(sections, {xPercent: 0});
 
             timeline.to(sections as gsap.TweenTarget[], {
                 xPercent: -100 * (sections.length - 1),

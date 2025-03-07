@@ -95,14 +95,4 @@ section {
             }
         }
     }
-
-    #progress-bar {
-        svg {
-            height: 32px;
-            width: 32px;
-            /*border: 2px solid white;*/
-            border-radius: 50%;
-            padding: 5px;
-        }
-    }
 }

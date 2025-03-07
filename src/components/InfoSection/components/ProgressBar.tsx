@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import {cn} from "@lib/utils";
 import {RefObject} from "react";
+import style from "./infosection.module.css";
 
 export const ProgressBar = ({progressBarRef}: { progressBarRef: RefObject<HTMLDivElement | null> }) => (
     <div id="progress-bar"
@@ -17,7 +18,7 @@ export const ProgressBar = ({progressBarRef}: { progressBarRef: RefObject<HTMLDi
          className="w-full fixed inset-x-0 bottom-0">
         <div className={"w-2/3 pb-8 m-auto relative flex overflow-hidden"}>
             <div className={"icons flex justify-between items-center w-full z-2 text-3xl"}>
-                <Info className={"text-[--darkRed] bg-black"}/>
+                <Info className={{style}}/>
                 <NotebookPen/>
                 <PencilLine/>
                 <UserRoundCheck/>

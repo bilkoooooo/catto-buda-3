@@ -23,3 +23,15 @@ progress::-moz-progress-bar {
     background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
     background-attachment: fixed;
 }
+
+svg {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    padding: 5px;
+
+    .active {
+        fill: var(--darkRed);
+        background: #0a0a0a;
+    }
+}
