@@ -5,7 +5,6 @@ import MenuStateProvider from "@services/MenuStateProvider";
 import Sidebar from "@components/Sidebar";
 import {LanguageProvider} from "@services/LanguageProvider";
 import {UserDeviceProvider} from "@services/UserDeviceProvider";
-
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="hu">
@@ -13,8 +12,8 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <UserDeviceProvider>
             <LanguageProvider>
                 <MenuStateProvider>
-                    {/*<Navbar/>*/}
-                    {/*<Sidebar/>*/}
+                    <Navbar/>
+                    <Sidebar/>
                     {children}
                 </MenuStateProvider>
             </LanguageProvider>
