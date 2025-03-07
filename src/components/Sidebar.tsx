@@ -28,14 +28,14 @@ const Sidebar = () => {
 
     const sideBarLinks = [
         {
-            key: "Gallery",
-            href: "#gallery",
-            text: gallery
-        },
-        {
             key: "About",
             href: "#about-me",
             text: about
+        },
+        {
+            key: "Info",
+            href: "#info",
+            text: info
         },
         {
             key: "Booking",
@@ -43,17 +43,17 @@ const Sidebar = () => {
             text: booking
         },
         {
-            key: "Info",
-            href: "#info",
-            text: info
-        },
+            key: "Gallery",
+            href: "#gallery",
+            text: gallery
+        }
     ];
 
     const SidebarLinkElement = ({text, href}: SidebarLink) => {
-
         return (
-            <div className={"text-stroke-1-2 text-stroke-darkRed  hover:text-[--darkRed] transition inline-block"}>
-                <a href={href} className="text-inherit text-6xl font-bold duration-300 ">{text}</a>
+            <div className={"inline-block"}>
+                <a href={href}
+                   className="text-inherit text-6xl font-bold duration-300 text-stroke-1-2  text-stroke-lightRed  hover:text-[--lightRed] transition ">{text}</a>
             </div>
         );
     }

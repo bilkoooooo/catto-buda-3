@@ -17,7 +17,7 @@ export default function Home() {
         }
     } = useContext(LanguageContext);
 
-    const Placeholder = () => <div className={"h-screen w-full flex items-center justify-center border-b border-red-400 "}> Placeholder </div>;
+    const Placeholder = () => <div className={"h-screen w-full flex items-center justify-center border-y border-red-400 "}> Placeholder </div>;
 
     return (
         <>
@@ -25,16 +25,18 @@ export default function Home() {
             <meta name="title" content={title}/>
             <div id="container" className="w-full relative bg-fixed bg-center bg-contain"
                  style={{backgroundImage: `url(${bgDark.src})`}}>
-                {/*<LogoSection/>*/}
 
-                {/*<HeaderSection/>*/}
+                <HeaderSection/>
 
                 {/*<VideoSection/>*/}
 
                 <AboutMeSection/>
 
-                <InfoSection/>
+                {/*<Placeholder/>*/}
 
+                {/*<InfoSection/>*/}
+
+                <Placeholder/>
                 {/*<GallerySection/>*/}
             </div>
         </>

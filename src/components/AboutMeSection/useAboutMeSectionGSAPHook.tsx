@@ -23,6 +23,18 @@ export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement
 
         const texts = gsap.utils.toArray('#about-me-text div') || [];
 
+        timeline.fromTo('#about-me-image',
+            {
+                scale: 0.6,
+                xPercent: 200,
+                immediateRender: true
+            },
+            {
+                scale: 1,
+                xPercent: 0,
+                duration: 1,
+            });
+
         texts.forEach((el: unknown, index) => {
             const element = el as Element;
             timeline.fromTo(element,

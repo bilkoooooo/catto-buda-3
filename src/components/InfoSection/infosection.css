@@ -1,0 +1,34 @@
+#progress-bar {
+    progress#progress-line {
+        /*position: fixed;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 1rem;
+        border: none;
+        background: blueviolet;
+
+        &::-webkit-progress-value,
+        &::-moz-progress-bar {
+            /*background: linear-gradient(to left, var(--lightRed) var(--darkRed));*/
+            background-color: pink;
+            background-attachment: fixed;
+        }
+    }
+
+
+    svg {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        padding: 5px;
+
+        &.active {
+            color: var(--darkRed);
+            /*fill: var(--darkRed);*/
+            background: #0a0a0a;
+        }
+    }
+}
