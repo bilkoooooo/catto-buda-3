@@ -5,7 +5,7 @@ export const HeaderSection = () => {
     return (
         <>
             <section id="header-section"
-                     className="flex w-full h-screen bg-fixed bg-center bg-contain bg-no-repeat"
+                     className="flex w-full h-screen bg-fixed bg-cover bg-left bg-no-repeat"
                      style={{
                          backgroundImage: `url(${heroinePic.src})`,
                      }}/>

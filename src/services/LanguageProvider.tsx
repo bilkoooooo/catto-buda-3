@@ -4,47 +4,7 @@ import {createContext, ReactNode, useContext, useEffect, useState} from "react";
 import huTranslation from "@/src/translations/hu/translation.json";
 import {UserDeviceContext} from "@services/UserDeviceProvider";
 import {ReadLanguageFile} from "@services/FileReader";
-
-type LanguageDataType = {
-    site: {
-        title: string;
-        description: string;
-    },
-    navbar: {
-        menu: string;
-        contact: string;
-    },
-    sidebar: {
-        gallery: string;
-        about: string;
-        booking: string;
-        info: string;
-    },
-    aboutMe: {
-        quote: string,
-        phrase1: string,
-        phrase2: string,
-        phrase3: string,
-        phrase4: string
-    },
-    info: Array<{
-        id?: string
-        title: string,
-        summary?: string,
-        text: string[],
-        text2?: string[] | undefined,
-        list?: Array<{
-            title: string | null,
-            items: string[]
-        }> | undefined,
-        colors: {
-            background: {
-                from: string
-                to: string
-            }
-        }
-    }>,
-}
+import {LanguageDataType} from "@services/LanguageDataTypes";
 
 interface LanguageContextType {
     language: string;
