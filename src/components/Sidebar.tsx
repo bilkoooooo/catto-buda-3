@@ -53,7 +53,7 @@ const Sidebar = () => {
         return (
             <div className={"inline-block"}>
                 <a href={href}
-                   className="text-inherit text-6xl font-bold duration-300 text-stroke-1-2  text-stroke-lightRed  hover:text-[--lightRed] transition ">{text}</a>
+                   className="text-inherit text-4xl md:text-5xl lg:text-6xl font-bold duration-300 text-stroke-1-2  text-stroke-lightRed  hover:text-[--lightRed] transition ">{text}</a>
             </div>
         );
     }
@@ -67,7 +67,7 @@ const Sidebar = () => {
             </div>
 
             <div className={cn(commonClasses, "bg-[--primaryDark]", isOpen ? 'translate-x-0 delay-300 ' : '')}>
-                <div className="w-full flex flex-col justify-center gap-5 pl-[10%] sideBarLinContainerk">
+                <div className="w-full flex flex-col justify-center gap-5 pl-[10%] ">
                     {sideBarLinks.map(({key, text, href}) =>
                         <SidebarLinkElement key={key} text={text} href={href}/>)}
                 </div>

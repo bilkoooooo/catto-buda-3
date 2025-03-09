@@ -51,13 +51,13 @@ export default function Navbar() {
         <nav id="navbar"
              ref={navbarRef}
              className="fixed max-w-full w-full top-0 z-[60] justify-between duration-500 text-white ">
-            <div className="mx-auto py-3 sm:px-6 lg:px-14">
+            <div className="mx-auto py-3 px-6 sm:px-10  lg:px-14">
                 <div className="relative flex items-center">
                     <div className="flex flex-1 h-full items-center justify-between">
                         <div onClick={() => setIsOpen(!isOpen)}
-                             className="z-40 flex items-center font-extrabold gap-2 opacity-80 duration-150 hover:opacity-100 cursor-pointer">
+                             className="z-40 flex items-center order-2 lg:order-0 font-extrabold gap-2 opacity-80 duration-150 hover:opacity-100 cursor-pointer">
                             <HamburgerMenu/>
-                            {menu}
+                            <span className={"hidden sm:block"}>{menu}</span>
                         </div>
 
                         <div>
@@ -68,7 +68,7 @@ export default function Navbar() {
 
                         <div className="flex flex-shrink justify-between">
                             <div className="center">
-                                <a className="flex items-center gap-2.5 no-underline" href={"/contact"}>
+                                <a className="hidden sm:flex items-center gap-2.5 no-underline" href={"/contact"}>
                                     {contact}
                                     <FaEnvelope/>
                                 </a>

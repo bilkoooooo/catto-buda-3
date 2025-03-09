@@ -5,9 +5,10 @@ import {HeaderSection} from "@components/HeaderSection";
 import {InfoSection} from "@components/InfoSection/InfoSection";
 import {LanguageContext} from "@services/LanguageProvider";
 import {useContext} from "react";
-import {VideoSection} from "@components/VideoSection";
-import {GallerySection} from "@components/GallerySection";
 import bgDark from "@assets/bg_dark.jpg";
+import {Placeholder} from "@components/common/Placeholder";
+import {VideoSection} from "@components/VideoSection/VideoSection";
+import {GallerySection} from "@components/GallerySection/GallerySection";
 
 export default function Home() {
     const {
@@ -15,8 +16,6 @@ export default function Home() {
             site: {title}
         }
     } = useContext(LanguageContext);
-
-    // const Placeholder = () => <div className={"h-screen w-full flex items-center justify-center border-y border-red-400 "}> Placeholder </div>;
 
     return (
         <>
@@ -30,11 +29,11 @@ export default function Home() {
 
                 <AboutMeSection/>
 
-                {/*<Placeholder/>*/}
-
                 <InfoSection/>
 
                 <GallerySection/>
+
+                <Placeholder/>
             </div>
         </>
     );

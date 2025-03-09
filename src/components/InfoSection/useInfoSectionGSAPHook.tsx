@@ -1,15 +1,22 @@
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import {RefObject} from "react";
+import {RefObject, useContext} from "react";
 import {addClass, removeClass} from "@lib/utils";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {UserDeviceContext} from "@services/UserDeviceProvider";
 
 type RefType = RefObject<HTMLDivElement | null>;
 
 export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: RefType) => {
     gsap.registerPlugin(ScrollTrigger);
+    const isMobile = useContext(UserDeviceContext)?.deviceType !== 'Desktop';
 
     useGSAP(() => {
+
+            if (isMobile) {
+                return false;
+            }
+
             if (!containerRef?.current) {
                 throw new Error('Container ref is not set');
             }
@@ -40,7 +47,7 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
 
             const progressLine = progressBarElem.querySelector('progress');
 
-            const timeline = gsap.timeline({
+            const timeline = !isMobile && gsap.timeline({
                 scrollTrigger: {
                     trigger: '#info-section',
                     start: "top top",
@@ -58,7 +65,7 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                     },
                     // snap: 1 / (sections.length - 1),
                     // snap: "labelsDirectional",
-                    markers: true,
+                    // markers: true,
                     end: () => ("+=" + (firstPanel.offsetWidth) * (sectionCount - 1)),
                     onSnapComplete: (self) => {
                         onCompleteSnapCallback(self);
@@ -76,15 +83,17 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                 ease: "none"
             });
 
-            timeline.to(sections as gsap.TweenTarget[], {
-                    xPercent: -100 * (sectionCount - 1),
-                    ease: "none",
-                    duration: 1,
-                },
-            );
+            if (timeline) {
+                timeline.to(sections as gsap.TweenTarget[], {
+                        xPercent: -100 * (sectionCount - 1),
+                        ease: "none",
+                        duration: 1,
+                    },
+                );
+            }
 
             return () => {
-                timeline.reverse();
+                timeline?.reverse?.();
             }
         }, []
     );

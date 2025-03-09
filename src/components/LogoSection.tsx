@@ -12,10 +12,11 @@ export const LogoSection = () => {
             scrollTrigger: {
                 scrub: 1,
                 pin: false,
-                trigger: '#container',
+                trigger: '#header-section',
                 start: "top top",
                 endTrigger: "#top-section",
                 end: "+=150",
+                // markers: true,
             },
         });
 
@@ -28,8 +29,7 @@ export const LogoSection = () => {
             }).to(
             '#logo-section',
             {
-                ease: 'power1.inOut',
-                duration: 0.5,
+                filter: 'none',
                 display: 'none',
             },
         );

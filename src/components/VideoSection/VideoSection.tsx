@@ -2,33 +2,14 @@
 
 import Image from "next/image";
 import introPic from "@assets/intro_2.gif";
-import {useGSAP} from "@gsap/react";
-import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {useRef} from "react";
+import {useGsapVideoSection} from "@components/VideoSection/useGsapVideoSection";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export const VideoSection = () => {
     const sectionRef = useRef(null);
-    useGSAP(() => {
-        const scrollAnim = gsap.timeline({
-            scrollTrigger: {
-                scrub: 1,
-                pin: false,
-                trigger: sectionRef.current,
-                start: "-=100 top",
-                end: "top",
-            },
-        });
 
-        scrollAnim.to(
-            '#video-section img',
-            {
-                filter: 'none',
-            },
-        )
-    });
+    useGsapVideoSection(sectionRef);
 
     return (
         <div id="video-section" ref={sectionRef} className="video-section h-screen w-full relative">

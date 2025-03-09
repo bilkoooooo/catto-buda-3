@@ -9,7 +9,7 @@ export const AboutMeImage = () => (
             id={"about-me-image"}
             src={AboutMePic}
             alt="about me"
-            className="object-contain self-center justify-self-center w-full h-full"
+            className="object-cover self-center justify-self-center w-full h-full"
             loading={"lazy"}
             sizes={"(max-width: 900px) 100vw, 600px"}
         />

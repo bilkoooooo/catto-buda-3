@@ -15,7 +15,7 @@ import "../infosection.css";
 export const ProgressBar = ({progressBarRef}: { progressBarRef: RefObject<HTMLDivElement | null> }) => (
     <div id="progress-bar"
          ref={progressBarRef}
-         className="w-full absolute inset-x-0 bottom-0">
+         className="w-full absolute inset-x-0 bottom-0 hidden lg:block">
         <div className={"w-2/3 pb-8 m-auto relative flex overflow-hidden"}>
             <div className={cn("flex justify-between items-center w-full z-2 text-3xl")}>
                 <Info className={"active"}/>
