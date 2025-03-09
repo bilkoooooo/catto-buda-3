@@ -21,8 +21,8 @@ export const InfoSection = () => {
             <div ref={containerRef}
                  className="flex flex-nowrap overscroll-none h-screen w-screen relative bg-gradient-to-r from-[--lightRed] to-[--darkRed]">
                 {Object.values(languageData.info).slice(0, 10).map((info, index) => <Panels key={index} info={info}/>)}
+                <ProgressBar progressBarRef={progressBarRef}/>
             </div>
-            <ProgressBar progressBarRef={progressBarRef}/>
         </section>
     )
 }

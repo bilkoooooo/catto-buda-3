@@ -19,12 +19,9 @@ export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement
                 start: '-=100 center',
                 end: () => "center center",
                 toggleActions: "play none none reverse",
-                markers: true
             },
             ease: "none"
         });
-
-
 
         // const texts = gsap.utils.toArray('#about-me-text div') || [];
 

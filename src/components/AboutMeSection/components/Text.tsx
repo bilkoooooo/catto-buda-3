@@ -1,11 +1,14 @@
 import {AboutMeType} from "@services/LanguageDataTypes";
+import {cn} from "@lib/utils";
 
 export const AboutMeText = ({languageData}: { languageData: AboutMeType }) => {
     const {quote, phrase1, phrase2, phrase3, phrase4} = languageData || {};
 
     return (
         <div id={"about-me-text"}
-             className="flex lg:basis-1/3 m:basis-1/2 sm:basis-full flex-col gap-4 text-xl leading-[1.8] lg:max-w-[600px] sm:w-full tracking-widest self-stretch overflow-auto text-white text-justify justify-between">
+             className={cn(
+                 "flex lg:basis-auto m:basis-1/2 sm:basis-full flex-col gap-4 text-l leading-[1.8]",
+                 "lg:max-w-[600px] sm:w-full tracking-widest self-stretch overflow-auto text-white text-justify justify-start")}>
             <div>“
                 <strong>
                     {quote}

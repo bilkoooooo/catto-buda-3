@@ -16,7 +16,7 @@ export default function Home() {
         }
     } = useContext(LanguageContext);
 
-    const Placeholder = () => <div className={"h-screen w-full flex items-center justify-center border-y border-red-400 "}> Placeholder </div>;
+    // const Placeholder = () => <div className={"h-screen w-full flex items-center justify-center border-y border-red-400 "}> Placeholder </div>;
 
     return (
         <>
@@ -30,7 +30,7 @@ export default function Home() {
 
                 <AboutMeSection/>
 
-                <Placeholder/>
+                {/*<Placeholder/>*/}
 
                 <InfoSection/>
 

@@ -15,7 +15,7 @@ export const AboutMeSection = () => {
     return (
         <section id="about-me-section" className="relative overflow-hidden bg-opacity-10 bg-pink-400">
             <div ref={containerRef}
-                 className="bg-transparent min-h-screen gap-x-8 w-full margin-auto p-12 overscroll-none flex lg:flex-row sm:flex-col justify-center items-start">
+                 className="bg-transparent min-h-screen gap-x-8 w-full margin-auto p-12 overscroll-none flex lg:flex-row sm:flex-col justify-center items-start content-start">
                 <AboutMeText languageData={aboutMe}/>
                 <AboutMeImage/>
             </div>

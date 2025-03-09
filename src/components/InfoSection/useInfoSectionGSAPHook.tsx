@@ -29,11 +29,6 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
 
             const onCompleteSnapCallback = ({progress}: { progress: number }) => {
                 const activeIndex = Math.round(progress * (sectionCount - 1));
-                // progressBarElem.value = progress * 100;
-                // gsap.to('progress', {
-                //     value: progress * 100,
-                //     ease: 'none',
-                // });
                 svgs.forEach((icon, index) => {
                     removeClass(icon, 'active');
 
@@ -43,7 +38,7 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                 });
             };
 
-            console.log(containerElem);
+            const progressLine = progressBarElem.querySelector('progress');
 
             const timeline = gsap.timeline({
                 scrollTrigger: {
@@ -54,17 +49,13 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                     pinSpacing: true,
                     pinnedContainer: containerElem,
                     anticipatePin: 1,
-                    // snap: {
-                    //     // snapTo: (value) => {
-                    //     //     return Math.round(value * (sectionCount - 1)) / (sectionCount - 1);
-                    //     // },
-                    //     // snapTo: 1 / (sectionCount - 1),
-                    //     snapTo: "labels",
-                    //     duration: {min: 0.5, max: 2},
-                    //     delay: 0.2,
-                    //     inertia: false,
-                    //     ease: "power1.out"
-                    // },
+                    snap: {
+                        snapTo: 1 / (sectionCount - 1),
+                        duration: {min: 0.5, max: 2},
+                        delay: 0.2,
+                        inertia: false,
+                        ease: "power1.out"
+                    },
                     // snap: 1 / (sections.length - 1),
                     // snap: "labelsDirectional",
                     markers: true,
@@ -72,8 +63,15 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                     onSnapComplete: (self) => {
                         onCompleteSnapCallback(self);
                     },
-                    onEnter: () => progressBarElem.classList.remove('hidden'),
-                    onLeave: () => progressBarElem.classList.add('hidden'),
+                    onUpdate: ({progress}) => {
+                        if (progressLine) {
+                            progressLine.value = progress * 100;
+                            gsap.to(progressLine, {
+                                value: progress * 100,
+                                ease: 'none',
+                            });
+                        }
+                    }
                 },
                 ease: "none"
             });
@@ -84,13 +82,6 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                     duration: 1,
                 },
             );
-
-
-            console.log(timeline.labels);
-            timeline.to('progress', {
-                value: 100,
-                ease: 'none',
-            });
 
             return () => {
                 timeline.reverse();
