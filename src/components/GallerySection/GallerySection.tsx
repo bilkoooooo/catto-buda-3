@@ -5,15 +5,33 @@ import React, {useEffect, useRef, useState} from "react";
 // import {ImageViewerComponent} from "@components/ImageViewerComponent";
 import {UseGallerySectionGSAPHook} from "@components/GallerySection/useGallerySectionGSAPHook";
 import {ImageList} from "@components/GallerySection/ImageList";
+import {nanoid} from "nanoid";
 
 
 export const GallerySection = () => {
-    const [images, setImage] = useState<HTMLImageElement[]>([]);
+    const [images, setImage] = useState<HTMLImageElement[] | { src: string, alt: string, id: string }[]>([]);
     // const [imageToShow, setImageToShow] = useState<number | null>(null)
     const galleryRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        getAllFiles().then(images => {
+        getAllFiles().then((response: { useStaticImages: boolean, images: string[] }) => {
+            const {images, useStaticImages} = response;
+            if (useStaticImages) {
+                images.forEach((image) => {
+                    setImage((images) =>
+                        [
+                            ...images,
+                            {
+                                src: image,
+                                alt: image,
+                                id: nanoid()
+                            }
+                        ]);
+                })
+
+                return;
+            }
+
             images.forEach((image) => {
                 import (`public/gallery/${image}`).then((img) => setImage(images => [...images, {
                     ...img.default,
@@ -42,7 +60,6 @@ export const GallerySection = () => {
         <div id="gallery-section" ref={galleryRef} className="w-screen min-h-screen relative">
             <ImageList images={images} galleryElem={galleryRef.current}/>
             <SelfPromo/>
-
             {/*{imageToShow && <ImageViewerComponent imgIndex={imageToShow} images={images} onClose={() => setImageToShow(null)}/>}*/}
         </div>
     );

@@ -3,7 +3,11 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {RefObject} from "react";
 
-export const UseGallerySectionGSAPHook = (images: HTMLImageElement[], galleryRef: RefObject<HTMLDivElement | null>) => {
+export const UseGallerySectionGSAPHook = (images: HTMLImageElement[] | {
+    src: string,
+    alt: string,
+    id: string
+}[], galleryRef: RefObject<HTMLDivElement | null>) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {

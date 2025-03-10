@@ -3,7 +3,7 @@ import React from "react";
 import gsap from "gsap";
 
 type Props = {
-    images: HTMLImageElement[],
+    images: HTMLImageElement[] | { src: string, alt: string, id: string }[],
     galleryElem: HTMLDivElement | null
 }
 
@@ -25,17 +25,21 @@ const onImageLoad = (event: React.SyntheticEvent, index: number, galleryElem: HT
 }
 
 export const ImageList = ({images, galleryElem}: Props) => (
-    <div id={"img-gallery"} className={"grid grid-cols-1 lg:grid-cols-2 gap-2"}>
+    <div id={"img-gallery"} className={"grid grid-cols-1 lg:grid-cols-2 gap-2 max-w-7xl mx-auto"}>
         {images.map((image, index) => {
-            const {src, id, height, width} = image;
+            const {src, id} = image;
             return (
                 <Image
                     key={"gallery_" + id}
                     loading={"lazy"}
                     quality={100}
-                    height={height}
-                    width={width}
-                    sizes="(max-width: 768px) 200px, (max-width: 1200px) 50vw, 33vw"
+                    // height={height}
+                    // width={width}
+                    // sizes="(max-width: 768px) 200px, (max-width: 1200px) 50vw, 33vw"
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    style={{width: '100%', height: 'auto'}}
                     src={src}
                     id={"gallery_" + id}
                     alt={id}
