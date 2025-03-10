@@ -55,7 +55,7 @@ export default function Navbar() {
                 <div className="relative flex items-center">
                     <div className="flex flex-1 h-full items-center justify-between">
                         <div onClick={() => setIsOpen(!isOpen)}
-                             className="z-40 flex items-center order-2 lg:order-0 font-extrabold gap-2 opacity-80 duration-150 hover:opacity-100 cursor-pointer">
+                             className="z-40 flex items-center order-2 lg:order-first font-extrabold gap-2 opacity-80 duration-150 hover:opacity-100 cursor-pointer">
                             <HamburgerMenu/>
                             <span className={"hidden sm:block"}>{menu}</span>
                         </div>

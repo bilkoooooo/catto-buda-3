@@ -12,7 +12,7 @@ type SidebarLink = {
 }
 
 const Sidebar = () => {
-    const {isOpen} = useContext(MenuStateContext);
+    const {isOpen,setIsOpen} = useContext(MenuStateContext);
     const {
         languageData: {
             sidebar
@@ -29,12 +29,12 @@ const Sidebar = () => {
     const sideBarLinks = [
         {
             key: "About",
-            href: "#about-me",
+            href: "#about-me-section",
             text: about
         },
         {
             key: "Info",
-            href: "#info",
+            href: "#info-section",
             text: info
         },
         {
@@ -44,15 +44,28 @@ const Sidebar = () => {
         },
         {
             key: "Gallery",
-            href: "#gallery",
+            href: "#gallery-section",
             text: gallery
         }
     ];
+
+    const onLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const href = e.currentTarget.getAttribute("href");
+        if (href) {
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({behavior: "smooth"});
+                setIsOpen(false);
+            }
+        }
+    }
 
     const SidebarLinkElement = ({text, href}: SidebarLink) => {
         return (
             <div className={"inline-block"}>
                 <a href={href}
+                   onClick={onLinkClick}
                    className="text-inherit text-4xl md:text-5xl lg:text-6xl font-bold duration-300 text-stroke-1-2  text-stroke-lightRed  hover:text-[--lightRed] transition ">{text}</a>
             </div>
         );

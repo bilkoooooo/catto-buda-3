@@ -25,7 +25,7 @@ const onImageLoad = (event: React.SyntheticEvent, index: number, galleryElem: HT
 }
 
 export const ImageList = ({images, galleryElem}: Props) => (
-    <div id={"img-gallery"} className={"lg:columns-4 md:columns-3 sm:columns2"}>
+    <div id={"img-gallery"} className={"grid grid-cols-1 lg:grid-cols-2 gap-2"}>
         {images.map((image, index) => {
             const {src, id, height, width} = image;
             return (

@@ -27,7 +27,6 @@ export const UseGallerySectionGSAPHook = (images: HTMLImageElement[], galleryRef
                     start: "-=100",
                     end: "center ",
                     toggleActions: "play reverse play reset",
-                    // markers: true
                 },
             });
         });

@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Kis Brigi Tattoo",
-    "description": "Creating and selling handmade jewelry"
+    "description": "Handcrafted jewelry making and sales"
   },
   "navbar": {
     "menu": "Menu",
@@ -14,85 +14,86 @@
     "info": "Information"
   },
   "aboutMe": {
-    "quote": "Wow, you draw so beautifully!\n Could you draw something for me too?",
-    "phrase1": "– perhaps this was the most motivating sentence throughout my childhood. In school\n I always looked forward to art class and breaks, that's when I could truly be the shining star of the class.\n Somehow it all started from there, from tigers drawn with black markers.",
-    "phrase2": "Later, I set out in the rudimentary Hungarian tattoo world without formal training, with a folder of drawn designs and unwavering determination, at 17. Many turned me away, a few helped, and during the Balaton summer seasons, they let me get close to the action. I officially started working as a tattoo artist with the Celtic Moon Tattoo team, working alongside James, from whom I really learned this wonderful profession.",
-    "phrase3": "In the absence of art schools, I discovered many things through tattooing, and perhaps even myself.",
-    "phrase4": "Many years have passed since then, and now I work in my own studio, occasionally guest tattooing abroad, and I'm very happy to be a tattoo artist. 😸"
+    "quote": "Wow, you draw so beautifully!\nCould you draw something for me too?",
+    "phrase1": "– perhaps this was the most motivating phrase throughout my childhood. In school, I always couldn't wait for art class and breaks, as that's when I could truly be the star of the class. Somehow it all started from there, from tigers drawn with black markers.",
+    "phrase2": "Later I set out in the primitive tattoo world of Hungary without formal training, with a portfolio of drawn designs and unwavering determination, at the age of 17. Many turned me away, a few helped, and during the Balaton summer seasons, I was allowed quite close to the action. I first officially started working as a tattoo artist with the Celtic Moon Tattoo team, working alongside James, from whom I truly learned this wonderful profession.",
+    "phrase3": "In the absence of art schools, I learned a lot through tattooing, but perhaps I even discovered myself.",
+    "phrase4": "Many years have passed since then, and now I work in my own studio, occasionally guest tattooing abroad, and I am very happy to be a tattoo artist. 😸"
   },
   "info": [
     {
       "title": "Information",
+      "summary": "One client per day <br> -What does my work process look like?",
       "text": [
-        "One day, one client \n-What does my work process look like?"
+        "One client per day \n -What does my work process look like?"
       ],
       "colors": {
         "background": {
-          "from": "#c3eb34",
-          "to": "#57106b",
-          "via": "#77940d"
+          "from": "#FF0000",
+          "to": "#FF7F00"
         }
       }
     },
     {
       "title": "Design.",
+      "summary": "<p>We meet at the shop at 11 AM to discuss your ideas. <br>During our conversation, I create the design to make the final result more personalized.</p> <p> When we are both satisfied with the design, the actual tattooing begins.</p>",
       "text": [
-        "We meet at the shop at 1 o'clock, sit down and chat a bit. I ask what tattoo you'd like, what's your idea, if you have a specific image, or just examples, or perhaps neither. It might happen that the images you bring aren't the best quality or aren't very expressive for the requested theme, in which case I help and suggest better ideas.",
-        "A beautiful picture might look good on a wall but doesn't necessarily work well as a tattoo.",
-        "During our conversation, I prepare the design (I draw by hand or edit on computer). This can take 1-2 hours, but during this time I get to know you a bit and the end result will be more personalized.",
-        "When the design is ready and we're both satisfied with it, we begin the tattooing."
+        "We meet at the shop at 11 AM, sit down, and chat a bit. I ask what you would like to get tattooed, what your idea is, whether you have a specific image or just examples, or perhaps neither. Sometimes the images brought along aren't the best quality or aren't as expressive for the requested theme, in which case I help and suggest better ideas.",
+        "A beautiful picture may look good on a wall but doesn't necessarily work well as a tattoo.",
+        "During our conversation, I create the design (I draw by hand or edit on the computer). This might take 1-2 hours, but during this time I get to know you a bit, and the result will be more personalized.",
+        "When the design is ready and we are both satisfied with it, we begin the tattooing."
       ],
       "colors": {
         "background": {
-          "from": "#57106b",
-          "to": "#34abfa",
-          "via": "#a426c7"
+          "from": "#FF7F00",
+          "to": "#FFFF00"
         }
       }
     },
     {
       "title": "Tattooing.",
+      "summary": "<p>We take breaks hourly, allowing time to eat and drink. This is important because you'll typically spend 4-6 hours with me.</p> <p> For pain relief, you can bring medication that you're familiar with, but let's discuss it. </p>",
       "text": [
-        "We take breaks roughly every hour, we can eat and drink (my shop also has a kitchen with a refrigerator and microwave), so you can bring food or order it. This is important because you'll typically spend 4-6 hours with me, and it's not a good idea to stay hungry as you might feel unwell!",
-        "For pain relief, you can bring medication that you're familiar with, if you have something that works for you (Flector, Advil, Cataflam, etc.). I don't use lidocaine-containing anesthetics; if you're planning to use these, please let's discuss it.",
+        "We take breaks roughly every hour so we can eat and drink (my shop has a kitchen with a refrigerator and microwave), so you can bring food or order it. This is important because you typically spend 4-6 hours with me, and it's not a good idea to stay hungry as you might feel unwell!",
+        "For pain relief, you can bring medication that you know works for you (Flector, Advil, Cataflam, etc.). I don't use lidocaine-based numbing agents, so if you're planning to use something like that, please let's discuss it.",
         "What's much more important is that you come well-rested and mentally prepared!"
       ],
       "colors": {
         "background": {
-          "from": "#34abfa",
-          "to": "#9c0e4b",
-          "via": "#1b6ea6"
+          "from": "#FFFF00",
+          "to": "#00FF00",
+          "via": ""
         }
       }
     },
     {
-      "title": "Completion.",
+      "title": "Finishing.",
+      "summary": "At the end of the day, I wash your tattoo with antiseptic soap and then cover it with a special tattoo bandage called Dry lock pad, after which we discuss aftercare.",
       "text": [
-        "When the work is finished, or the day's planned continuation, I wash your tattoo with antiseptic soap and take photos (these photos may be uploaded to the internet as part of my portfolio, of course without faces and names, and I don't tag anyone on social media).",
-        "Then I cover it with a so-called Dry lock pad designed for tattoos, we discuss aftercare, and I give you printed instructions."
+        "When the artwork is complete, or the day's planned continuation is finished, I wash your tattoo with antiseptic soap and photograph it (these photos may be uploaded to the internet as part of my portfolio, of course without faces and names, and I don't tag anyone on social media).",
+        "Afterward, I cover it with a special tattoo bandage called Dry lock pad, we discuss the aftercare, and I provide printed instructions for you to take home."
       ],
       "colors": {
         "background": {
-          "from": "#9c0e4b",
-          "to": "#14c71a",
-          "via": "#1b6ea6"
+          "from": "#00FF00",
+          "to": "#00FFFF"
         }
       }
     },
     {
       "title": "Aftercare.",
+      "summary": "The protective bandage can be removed after 8 hours, then wash the tattooed area with water, possibly with antiseptic soap as well. \n Then apply Bepanthten cream 3 times daily with clean hands for 1-1.5 weeks.",
       "text": [
-        "The protective pad (dry lock pad) can be removed after 8 hours, then wash the tattooed area with water, possibly with antiseptic soap as well.",
-        "Don't use a towel for drying! If possible, let it air dry, then apply a thin layer of Bepanthen cream (I don't recommend the ointment because it's too greasy and doesn't absorb well). By 'thin layer' I mean that there shouldn't be excess cream on the skin surface! (use other healing creams only if you're allergic to Bepanthen, and only after prior consultation)",
-        "Apply cream 3 times a day, with clean hands!",
-        "<span className=\"bg-lime-600\">For a maximum of 1-1.5 weeks.</span>",
-        "After that, it's advisable to continue caring for the skin with body lotion."
+        "The protective bandage (dry lock pad) can be removed after 8 hours, then wash the tattooed area with water, possibly with antiseptic soap as well.",
+        "Don't use a towel for drying! Let it air dry if possible, then apply a thin layer of Bepanthten cream (I don't recommend the ointment as it's too greasy and doesn't absorb well). By thin layer, I mean there shouldn't be excess cream sitting on the skin! (Use other healing creams only if you're allergic to Bepanthen, and only after discussing it with me)",
+        "Apply cream 3 times daily with clean hands!",
+        "<span className=\"bg-lime-600\">Maximum 1-1.5 weeks.</span>",
+        "After that, it's advisable to continue moisturizing the skin with body lotion."
       ],
       "colors": {
         "background": {
-          "from": "#14c71a",
-          "to": "#de9d10",
-          "via": "#1b6ea6"
+          "from": "#00FFFF",
+          "to": "#0000FF"
         }
       },
       "list": [
@@ -107,69 +108,115 @@
           "title": "(2-3 weeks): ",
           "items": [
             "soaking",
-            "using saunas",
-            "using tanning beds/sunbathing",
-            "scratching (it's normal for it to itch, this is due to healing)",
-            "picking at it while peeling",
+            "saunas",
+            "tanning beds/sunbathing",
+            "scratching (itching is normal, it's part of the healing process)",
+            "picking during peeling",
             "applying more cream than prescribed"
-          ]
+          ],
+          "colors": {
+            "background": {
+              "from": "#0000FF",
+              "to": "#4B0082"
+            }
+          }
         }
       ],
       "text2": [
-        "In the long term, all tattoos are damaged by the sun's UV radiation, so it's advisable to avoid tanning beds and sunbathing on the tattooed area, and to use high SPF sunscreen.",
-        "After a tattoo, the skin's epidermal layer regenerates for 6 months, so it's not as thick and doesn't provide as much protection as intact skin! During this time, it must be protected by covering it from the sun; sunscreen alone is not enough!",
-        "<div> If there's any problem, speak up, ask!!! </div>"
+        "In the long term, all tattoos are damaged by the sun's UV radiation, so it's recommended to avoid tanning beds and sunbathing on the tattooed area, and use high SPF sunscreen.",
+        "After getting a tattoo, the skin's epithelial layer regenerates for 6 months, so it's not as thick and doesn't provide as much protection to the body as intact skin! During this time, it must be protected by covering it from the sun, sunscreen alone is not enough!",
+        "<div> If there are any issues, speak up, ask questions!!! </div>"
       ]
     },
     {
-      "title": "Finances.",
+      "title": "Financials.",
+      "summary": "Design – 5,000 HUF/hour <br> Tattooing – 20,000 HUF/hour <br> Minimum daily fee – 50,000 HUF / Maximum daily fee – 100,000 HUF",
       "text": [
         "I've tried to come up with a fair pricing system that falls between hourly and daily rates, so you can approach me for both smaller* and larger tattoos.",
-        "Design – 5 thousand HUF/hour",
-        "Tattooing – 20 thousand HUF/hour",
-        "Minimum daily fee – 50 thousand HUF",
-        "Maximum daily fee – 100 thousand HUF"
-      ]
+        "Design – 5,000 HUF/hour",
+        "Tattooing – 20,000 HUF/hour",
+        "Minimum daily fee – 50,000 HUF",
+        "Maximum daily fee – 100,000 HUF"
+      ],
+      "colors": {
+        "background": {
+          "from": "#4B0082",
+          "to": "#8B00FF"
+        }
+      }
     },
     {
+      "id": "requests",
       "title": "What kind of requests should you choose me for?",
+      "summary": "<p> <b>What suits me: </b> Living things – animals, people, fictional creatures. 'In style' – realistic (lifelike), surreal, fairy-tale-like (cartoon-like, comic-book style). I also like new trends! * I enjoy creating both colored and black and white works. </p> <p> <b>What doesn't suit me:</b> Traditional tribal patterns – Maori, Japanese (these historically significant patterns have complex symbol systems that I know little about) </br> Horror themes or negative topics. </p> <p><b>What I won't accept:</b> Continuing, fixing, or covering up another tattoo artist's work. </br> Cover-ups only in very unique cases where I can see that I can create a full-value end result. (Here I often recommend laser fading first, which can take a long time, but I can design much prettier solutions on it.) </br> Text/lettering, tiny tattoos (just a few centimeters). </br> *If I can create several smaller tattoos in one day on one client, that's certainly possible.</p>",
       "text": [
-        "Since I've been tattooing for a long time, my work is versatile and I haven't strictly specialized in one style. Of course, I also have tasks that suit me better (soul and body), so I'll prioritize these and there will be requests that I'll decline.",
-        "What suits me:",
-        "Living things – animals, people, fictional creatures.",
-        "\"Stylistically\" – realistic (lifelike), surreal, fairy-tale like (cartoon-ish, even comic book style)",
-        "I also like new trends! *",
-        "I enjoy creating both colored and black and white works.",
-        "What doesn't suit me:",
-        "Traditional tribal patterns – Maori, Japanese (these historically significant patterns have serious symbol systems, about which I know little)",
-        "Horrific or negative themes.",
-        "What I won't take on:",
-        "Continuing, fixing, or covering another tattoo artist's work.",
-        "I only do cover-ups in very unique cases, if I see that I can create a full-value end result. (Here I often recommend laser fading first, which can take a lot of time, but allows me to design much nicer solutions.)",
-        "Inscriptions, tiny (few centimeters) tattoos.",
-        "*If I can create several smaller tattoos in one day on one client, that's certainly possible."
-      ]
+        "<div>Since I've been tattooing for a long time, my work is versatile, and I haven't strictly specialized in one style. Of course, I have tasks that suit me better (body and soul), so I'll give preference to these and there will be requests that I decline. </div>",
+        "<div>What suits me:  </div> ",
+        "<div>Living things – animals, people, fictional creatures. </br> 'In style' – realistic (lifelike), surreal, fairy-tale-like (cartoon-like, comic-book style). </br> I also like new trends! * </br> I enjoy creating both colored and black and white works.",
+        "<div>What doesn't suit me:</div>",
+        "<div>Traditional tribal patterns – Maori, Japanese (these historically significant patterns have complex symbol systems that I know little about) </br> Horror themes or negative topics. </br> <div>",
+        "<div>What I won't accept:</div>",
+        "<div>Continuing, fixing, or covering up another tattoo artist's work. </br> Cover-ups only in very unique cases where I can see that I can create a full-value end result. (Here I often recommend laser fading first, which can take a long time, but I can design much prettier solutions on it.) </br> Text/lettering, tiny tattoos (just a few centimeters). </br> *If I can create several smaller tattoos in one day on one client, that's certainly possible. </div>"
+      ],
+      "colors": {
+        "background": {
+          "from": "#8B00FF",
+          "to": "#FF0080"
+        }
+      }
     },
     {
       "title": "Why is your patience important?",
+      "summary": "<p>You can only book with me via email.</p> <p> <b>In August</b> I release appointments from <b>September</b> through <b>January</b>. <br> <b>In December</b> I release appointments from <b>January</b> through <b>May</b> <p> In summer I work less, by individual arrangement, for two technical reasons: I rest, and the summer sun almost completely ruins my fresh work </p>",
       "text": [
-        "Over the years, many of you have come to love my work and more and more people have approached me. I'm very happy about this because I can create and fulfill myself happily every day. What's difficult, however, is effectively managing my time.",
-        "A tattoo isn't like a loaf of bread, and I'm alone for every task."
+        "Over the years, many of you have come to love my work and more and more people reach out to me. I'm very happy about this because I can create and fulfill myself every day. What's difficult, however, is efficiently organizing my time.",
+        "A tattoo isn't a loaf of bread, and I'm on my own for every task."
       ],
       "text2": [
-        "So it's best to write to me in August and December, because that's when I can meaningfully deal with it."
+        "So it's best to write to me in August and December because that's when I can effectively deal with it."
       ],
       "list": [
         {
           "title": "Therefore, I work according to the following system:",
           "items": [
             "you can only book with me via email",
-            "In August I release appointments from September to January",
-            "In December I release appointments from January to May",
-            "I work less in summer by individual arrangement, for two technical reasons: I rest, and the summer sun almost completely ruins my fresh work"
+            "In August I release appointments from September through January",
+            "In December I release appointments from January through May",
+            "In summer I work less, by individual arrangement, for two technical reasons: I rest, and the summer sun almost completely ruins my fresh work"
           ]
         }
-      ]
+      ],
+      "colors": {
+        "background": {
+          "from": "#FF0080",
+          "to": "#FF0000"
+        }
+      }
+    },
+    {
+      "title": "\"When can you give me an appointment, how long is the waiting list?\"",
+      "summary": "",
+      "neededOnInfo": false,
+      "text": [],
+      "list": [
+        {
+          "title": null,
+          "items": [
+            "I don't know",
+            "if you didn't get an appointment or perhaps a response to your email, please don't be offended; if you're sure I would gladly take on your request, write again! It's possible I didn't notice it, you didn't get processed, etc.",
+            "when I reopen my calendar, I will always first schedule clients whose tattoos are still unfinished or whose appointments had to be canceled (e.g., due to illness)"
+          ]
+        }
+      ],
+      "text2": [
+        "If you've read all this, you've already helped me a lot in my work so I can spend more time tattooing! 🙂"
+      ],
+      "colors": {
+        "background": {
+          "from": "#FF0000",
+          "to": "#FF7F00"
+        }
+      }
     }
   ]
 }

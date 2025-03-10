@@ -1,9 +1,5 @@
-const ContactPage = () => {
-    return (
-        <div>
-            <h1>Contact Page</h1>
-        </div>
-    )
-}
+import {Placeholder} from "@components/common/Placeholder";
+
+const ContactPage = () => <Placeholder text={'Kontakt'}/>
 
 export default ContactPage;
