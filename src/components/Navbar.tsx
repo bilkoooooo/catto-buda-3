@@ -6,7 +6,7 @@ import {MenuStateContext} from "@services/MenuStateProvider";
 import {LanguageContext} from "@services/LanguageProvider";
 import logo from "public/assets/logo.png";
 import Image from "next/image";
-
+//authoer
 const svgAttr = {
     width: 24,
     height: "24",
