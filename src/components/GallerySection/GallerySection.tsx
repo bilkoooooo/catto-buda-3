@@ -12,7 +12,6 @@ export const GallerySection = () => {
     // const [imageToShow, setImageToShow] = useState<number | null>(null)
     const galleryRef = useRef<HTMLDivElement | null>(null);
 
-
     useEffect(() => {
         getAllFiles().then(images => {
             images.forEach((image) => {
