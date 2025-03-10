@@ -19,7 +19,7 @@ export const InfoSection = () => {
     return (
         <section id="info-section" className="relative">
             <div ref={containerRef}
-                 className="flex flex-nowrap overflow-x-scroll sm:overflow-x-hidden overscroll-none h-screen w-screen relative bg-gradient-to-r from-[--lightRed] to-[--darkRed] snap-x snap-proximity lg:snap-none">
+                 className="flex flex-nowrap overflow-x-scroll sm:overflow-x-hidden overscroll-auto sm:overscroll-none h-screen w-screen relative bg-gradient-to-r from-[--lightRed] to-[--darkRed] snap-x snap-proximity lg:snap-none">
                 {Object.values(languageData.info).slice(0, 10).map((info, index) =>
                     <Panels key={index} info={info}/>)}
                 <ProgressBar progressBarRef={progressBarRef}/>
