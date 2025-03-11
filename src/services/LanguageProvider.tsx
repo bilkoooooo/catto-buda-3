@@ -1,9 +1,10 @@
 'use client';
 
-import {createContext, ReactNode, useContext, useEffect, useState} from "react";
+import {createContext, ReactNode, useCallback, useContext, useEffect, useState} from "react";
 import huTranslation from "@/src/translations/hu/translation.json";
+import enTranslation from "@/src/translations/en/translation.json";
+import deTranslation from "@/src/translations/de/translation.json";
 import {UserDeviceContext} from "@services/UserDeviceProvider";
-import {ReadLanguageFile} from "@services/FileReader";
 import {LanguageDataType} from "@services/LanguageDataTypes";
 
 interface LanguageContextType {
@@ -18,20 +19,33 @@ export const LanguageContext = createContext<LanguageContextType>({
     languageData: huTranslation,
 });
 
+const Languages = {
+    hu: huTranslation,
+    en: enTranslation,
+    de: deTranslation
+} as { [key: string]: LanguageDataType };
+
 export const LanguageProvider = ({children}: { children: ReactNode }) => {
     const userDevice = useContext(UserDeviceContext);
 
-    const [language, setLanguage] = useState(userDevice?.deviceLanguage ?? 'hu');
-    const [languageData, setLanguageData] = useState<LanguageDataType>(huTranslation);
+    const defaultLang = userDevice?.deviceLanguage ?? 'hu';
 
-    const changeLanguage = async (lang: string): Promise<void> => {
+    const [language, setLanguage] = useState(defaultLang);
+    const [languageData, setLanguageData] = useState<LanguageDataType>(Languages[defaultLang]);
+
+    const changeLanguage = (useCallback(async (lang: string): Promise<void> => {
+        if (lang === language) return;
         setLanguage(lang);
+        setLanguageData(Languages[lang]);
         localStorage.setItem('language', lang);
-    }
+    }, [language]))
 
     useEffect(() => {
-        ReadLanguageFile({language}).then(setLanguageData);
-    }, [language]);
+        const langInLocalStorage: string | null = localStorage.getItem('language');
+
+        if (langInLocalStorage) changeLanguage?.(langInLocalStorage);
+
+    }, [changeLanguage]);
 
     return (
         <LanguageContext.Provider value={{language, changeLanguage, languageData}}>

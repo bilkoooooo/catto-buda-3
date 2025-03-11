@@ -33,12 +33,6 @@ export type InfoType = Array<{
         title: string | null,
         items: string[]
     }> | undefined,
-    colors: {
-        background: {
-            from: string
-            to: string
-        }
-    }
 }>;
 
 export type LanguageDataType = {

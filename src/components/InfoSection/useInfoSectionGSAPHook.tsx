@@ -56,6 +56,7 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                     pinSpacing: true,
                     pinnedContainer: containerElem,
                     anticipatePin: 1,
+                    fastScrollEnd: 2000,
                     snap: {
                         snapTo: 1 / (sectionCount - 1),
                         duration: {min: 0.5, max: 2},
@@ -63,9 +64,6 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                         inertia: false,
                         ease: "power1.out"
                     },
-                    // snap: 1 / (sections.length - 1),
-                    // snap: "labelsDirectional",
-                    // markers: true,
                     end: () => ("+=" + (firstPanel.offsetWidth) * (sectionCount - 1)),
                     onSnapComplete: (self) => {
                         onCompleteSnapCallback(self);

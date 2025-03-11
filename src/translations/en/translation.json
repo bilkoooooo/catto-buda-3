@@ -22,19 +22,15 @@
   },
   "info": [
     {
+      "id": "info",
       "title": "Information",
       "summary": "One client per day <br> -What does my work process look like?",
       "text": [
         "One client per day \n -What does my work process look like?"
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF0000",
-          "to": "#FF7F00"
-        }
-      }
+      ]
     },
     {
+      "id": "design",
       "title": "Design.",
       "summary": "<p>We meet at the shop at 11 AM to discuss your ideas. <br>During our conversation, I create the design to make the final result more personalized.</p> <p> When we are both satisfied with the design, the actual tattooing begins.</p>",
       "text": [
@@ -42,45 +38,29 @@
         "A beautiful picture may look good on a wall but doesn't necessarily work well as a tattoo.",
         "During our conversation, I create the design (I draw by hand or edit on the computer). This might take 1-2 hours, but during this time I get to know you a bit, and the result will be more personalized.",
         "When the design is ready and we are both satisfied with it, we begin the tattooing."
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF7F00",
-          "to": "#FFFF00"
-        }
-      }
+      ]
     },
     {
+      "id": "process",
       "title": "Tattooing.",
       "summary": "<p>We take breaks hourly, allowing time to eat and drink. This is important because you'll typically spend 4-6 hours with me.</p> <p> For pain relief, you can bring medication that you're familiar with, but let's discuss it. </p>",
       "text": [
         "We take breaks roughly every hour so we can eat and drink (my shop has a kitchen with a refrigerator and microwave), so you can bring food or order it. This is important because you typically spend 4-6 hours with me, and it's not a good idea to stay hungry as you might feel unwell!",
         "For pain relief, you can bring medication that you know works for you (Flector, Advil, Cataflam, etc.). I don't use lidocaine-based numbing agents, so if you're planning to use something like that, please let's discuss it.",
         "What's much more important is that you come well-rested and mentally prepared!"
-      ],
-      "colors": {
-        "background": {
-          "from": "#FFFF00",
-          "to": "#00FF00",
-          "via": ""
-        }
-      }
+      ]
     },
     {
+      "id": "finish",
       "title": "Finishing.",
       "summary": "At the end of the day, I wash your tattoo with antiseptic soap and then cover it with a special tattoo bandage called Dry lock pad, after which we discuss aftercare.",
       "text": [
         "When the artwork is complete, or the day's planned continuation is finished, I wash your tattoo with antiseptic soap and photograph it (these photos may be uploaded to the internet as part of my portfolio, of course without faces and names, and I don't tag anyone on social media).",
         "Afterward, I cover it with a special tattoo bandage called Dry lock pad, we discuss the aftercare, and I provide printed instructions for you to take home."
-      ],
-      "colors": {
-        "background": {
-          "from": "#00FF00",
-          "to": "#00FFFF"
-        }
-      }
+      ]
     },
     {
+      "id": "aftercare",
       "title": "Aftercare.",
       "summary": "The protective bandage can be removed after 8 hours, then wash the tattooed area with water, possibly with antiseptic soap as well. \n Then apply Bepanthten cream 3 times daily with clean hands for 1-1.5 weeks.",
       "text": [
@@ -90,12 +70,6 @@
         "<span className=\"bg-lime-600\">Maximum 1-1.5 weeks.</span>",
         "After that, it's advisable to continue moisturizing the skin with body lotion."
       ],
-      "colors": {
-        "background": {
-          "from": "#00FFFF",
-          "to": "#0000FF"
-        }
-      },
       "list": [
         {
           "title": "PROHIBITED (first 2-3 days):",
@@ -113,13 +87,7 @@
             "scratching (itching is normal, it's part of the healing process)",
             "picking during peeling",
             "applying more cream than prescribed"
-          ],
-          "colors": {
-            "background": {
-              "from": "#0000FF",
-              "to": "#4B0082"
-            }
-          }
+          ]
         }
       ],
       "text2": [
@@ -129,6 +97,7 @@
       ]
     },
     {
+      "id": "finances",
       "title": "Financials.",
       "summary": "Design – 5,000 HUF/hour <br> Tattooing – 20,000 HUF/hour <br> Minimum daily fee – 50,000 HUF / Maximum daily fee – 100,000 HUF",
       "text": [
@@ -137,13 +106,7 @@
         "Tattooing – 20,000 HUF/hour",
         "Minimum daily fee – 50,000 HUF",
         "Maximum daily fee – 100,000 HUF"
-      ],
-      "colors": {
-        "background": {
-          "from": "#4B0082",
-          "to": "#8B00FF"
-        }
-      }
+      ]
     },
     {
       "id": "requests",
@@ -157,13 +120,7 @@
         "<div>Traditional tribal patterns – Maori, Japanese (these historically significant patterns have complex symbol systems that I know little about) </br> Horror themes or negative topics. </br> <div>",
         "<div>What I won't accept:</div>",
         "<div>Continuing, fixing, or covering up another tattoo artist's work. </br> Cover-ups only in very unique cases where I can see that I can create a full-value end result. (Here I often recommend laser fading first, which can take a long time, but I can design much prettier solutions on it.) </br> Text/lettering, tiny tattoos (just a few centimeters). </br> *If I can create several smaller tattoos in one day on one client, that's certainly possible. </div>"
-      ],
-      "colors": {
-        "background": {
-          "from": "#8B00FF",
-          "to": "#FF0080"
-        }
-      }
+      ]
     },
     {
       "title": "Why is your patience important?",
@@ -185,15 +142,10 @@
             "In summer I work less, by individual arrangement, for two technical reasons: I rest, and the summer sun almost completely ruins my fresh work"
           ]
         }
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF0080",
-          "to": "#FF0000"
-        }
-      }
+      ]
     },
     {
+      "id": "patience",
       "title": "\"When can you give me an appointment, how long is the waiting list?\"",
       "summary": "",
       "neededOnInfo": false,
@@ -210,13 +162,7 @@
       ],
       "text2": [
         "If you've read all this, you've already helped me a lot in my work so I can spend more time tattooing! 🙂"
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF0000",
-          "to": "#FF7F00"
-        }
-      }
+      ]
     }
   ]
 }

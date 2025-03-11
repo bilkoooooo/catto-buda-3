@@ -22,19 +22,15 @@
   },
   "info": [
     {
+      "id": "info",
       "title": "Tudnivalók",
       "summary": "Egy nap egy vendég <br> -Hogy néz ki nálam egy munkafolyamat?",
       "text": [
         "Egy nap egy vendég \n -Hogy néz ki nálam egy munkafolyamat?"
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF0000",
-          "to": "#FF7F00"
-        }
-      }
+      ]
     },
     {
+      "id": "design",
       "title": "Tervezés.",
       "summary": "<p>11 órakor találkozunk az üzletben, megbeszéljük az elképzeléseket. <br>Beszélgetés közben elkészítem a tervet, hogy személyre szabottabb legyen a végeredmény.</p> <p> Amikor mindketten elégedettek vagyunk a tervvel, megkezdődik a tényleges tetoválás.</p>",
       "text": [
@@ -42,45 +38,29 @@
         "Egy szép kép lehet mutatós a falon, de nem feltétlen áll jól tetoválásként.",
         "Beszélgetés közben elkészítem a tervet (kézzel rajzolok, vagy számítógépen szerkesztek) Ez akár 1-2 órát is igénybe vehet, de addig kicsit megismerlek és jobban személyre szabott lesz a végeredmény.",
         "Amikor elkészül a terv és mindketten elégedettek vagyunk vele, nekikezdünk a tetoválásnak."
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF7F00",
-          "to": "#FFFF00"
-        }
-      }
+      ]
     },
     {
+      "id": "process",
       "title": "Tetoválás.",
       "summary": "<p>Óránként szünetet tartunk, tudunk enni, inni. Ez fontos, mert általában 4-6 órát nálam töltesz.</p> <p> Fájdalomcsillapításra hozhatsz magaddal gyógyszert amit ismersz, de beszéljünk róla. </p>",
       "text": [
         "Nagyjából óránként szünetet tartunk, tudunk enni, inni (az üzletemben konyha is van,hűtővel,mikróval) tehát lehet hozni, de rendelni is ételt. Ez fontos, mert általában 4-6 órát nálam töltesz, nem érdemes éhesen maradni, mert rosszul lehetsz!",
         "Fájdalomcsillapításra hozhatsz magaddal gyógyszert amit ismersz, ha van ami bevált (Flector,Advil, Cataflam stb.) Lidocain tartalmú érzéstelenítőket nem használok, ha ilyesmivel készülsz kérlek beszéljük meg.",
         "Ami sokkal fontosabb, hogy kipihenve, lelkileg felkészülve gyere!"
-      ],
-      "colors": {
-        "background": {
-          "from": "#FFFF00",
-          "to": "#00FF00",
-          "via": ""
-        }
-      }
+      ]
     },
     {
+      "id": "finish",
       "title": "Befejezés.",
       "summary": "Nap végén a tetoválásod fertőtlenítős szappannal lemosom és utána egy úgynevezett Dry lock pad tetoválásra tervezett pelenkával lefedem, ezt követően megbeszéljük az utókezelést.",
       "text": [
         "Amikor elkészül a mű, vagy az aznapra tervezett folytatás, a tetoválásod fertőtlenítős szappannal lemosom és lefotózom (az internetre ezek a képek felkerülhetnek, portfólióként használom, természetesen arc és név nélkül, social media-kon nem jelölök meg senkit).",
         "Utána egy úgynevezett Dry lock pad tetoválásra tervezett pelenkával lefedem, az utókezelést megbeszéljük és azt kinyomtatva oda is adom."
-      ],
-      "colors": {
-        "background": {
-          "from": "#00FF00",
-          "to": "#00FFFF"
-        }
-      }
+      ]
     },
     {
+      "id": "aftercare",
       "title": "Utókezelés.",
       "summary": "A tetováltatást védő pelenka 8 óra elteltével vehető le, utána a tetovált felületet mossuk le vízzel, esetleg fertőtlenítő szappannal is. \n Majd naponta 3x Bepanhten krémmel  kenjük be, tiszta kézzel. 1-1,5 hétig.",
       "text": [
@@ -90,12 +70,6 @@
         "<span className=\"bg-lime-600\">1-1,5 hétig maximum.</span>",
         "Utána testápolóval érdemes még a bőrt ápolni."
       ],
-      "colors": {
-        "background": {
-          "from": "#00FFFF",
-          "to": "#0000FF"
-        }
-      },
       "list": [
         {
           "title": "TILOS (az első 2-3 nap):",
@@ -129,6 +103,7 @@
       ]
     },
     {
+      "id": "finances",
       "title": "Anyagiak.",
       "summary": "Tervezés – 5ezer ft/ óra <br> Tetoválás – 20ezer ft/ óra <br> Minimum napi díj – 50ezer ft / Maximum napi díj – 100ezer ft",
       "text": [
@@ -137,13 +112,7 @@
         "Tetoválás – 20ezer ft/ óra",
         "Minimum napi díj – 50ezer ft",
         "Maximum napi díj – 100ezer ft"
-      ],
-      "colors": {
-        "background": {
-          "from": "#4B0082",
-          "to": "#8B00FF"
-        }
-      }
+      ]
     },
     {
       "id": "requests",
@@ -157,15 +126,10 @@
         "<div>Hagyományos törzsi minták – maori, japán (ezeknek a történelemmel bíró mintáknak komoly szimbólumrendszere van, amiknek a jelentéséről keveset tudok) </br> Horrorisztikus vagy negatív témák. </br> <div>",
         "<div>Amit nem fogok elvállalni:</div>",
         "<div>Más tetováló munkájának folytatása, javítása, takarása. </br> Takarást csak nagyon egyedi esetekben, ha úgy látom teljes értékű végeredményt tudok rá alkotni. (Itt gyakran ajánlom előbb a lézeres halványítást, ami sok idő lehet, de sokkal szebb megoldásokat tudok tervezni rá.) </br> Feliratokat, pici (pár centis tetoválásokat). </br> *Ha több kisebb tetoválást készíthetek egy napon egy vendégre, az természetesen megoldható. </div>"
-      ],
-      "colors": {
-        "background": {
-          "from": "#8B00FF",
-          "to": "#FF0080"
-        }
-      }
+      ]
     },
     {
+      "id": "patience",
       "title": "Miért fontos a türelmed?",
       "summary": "<p>Csak e-mailben lehet hozzám bejelentkezni.</p> <p> <b>Augusztusban</b> adom ki az időpontokat <b>Szeptembertől</b> <b>Januárig</b>. <br> <b>Decemberben</b> peidg <b>Januártól</b> <b>Májusig</b> <p> Nyáron keveset dolgozom egyéni megbeszélés alapján, ennek két technikai oka van: pihenek, illetve a nyári nap szinte teljesen tönkreteszi a friss munkám </p>",
       "text": [
@@ -185,15 +149,10 @@
             "nyáron keveset dolgozom egyéni megbeszélés alapján, ennek két technikai oka van: pihenek, illetve a nyári nap szinte teljesen tönkreteszi a friss munkám"
           ]
         }
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF0080",
-          "to": "#FF0000"
-        }
-      }
+      ]
     },
     {
+      "id": "waitingList",
       "title": "\"Mikorra tudsz időpontot adni, mekkora a várólista?\"",
       "summary": "",
       "neededOnInfo": false,
@@ -210,13 +169,7 @@
       ],
       "text2": [
         "Ha ezt mind elolvastad máris sokat segítettél a munkámban, hogy mégtöbb időt tölthessek tetoválással! \uD83D\uDE42"
-      ],
-      "colors": {
-        "background": {
-          "from": "#FF0000",
-          "to": "#FF7F00"
-        }
-      }
+      ]
     }
   ]
 }
