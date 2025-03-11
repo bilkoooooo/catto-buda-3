@@ -73,10 +73,6 @@ body {
     background: var(--lightRed);
 }
 
-#logo-section {
-    font-family: "Bebas Neue", serif;
-}
-
 section {
     #requests {
         .text-container {

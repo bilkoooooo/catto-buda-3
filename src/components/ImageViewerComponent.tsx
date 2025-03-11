@@ -14,7 +14,7 @@ export const ImageViewerComponent = ({imgIndex, images, onClose}: ImageViewerCom
             <div className={"w-full lg:w-auto"}>
                 <div className={"relative flex items-center justify-center"}>
                     {/*<Image*/}
-                    {/*    src={images[imgIndex].src}*/}
+                    {/*    src={gallery[imgIndex].src}*/}
                     {/*    fill={true}*/}
                     {/*/>*/}
                 </div>

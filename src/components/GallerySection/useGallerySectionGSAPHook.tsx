@@ -3,11 +3,7 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {RefObject} from "react";
 
-export const UseGallerySectionGSAPHook = (images: HTMLImageElement[] | {
-    src: string,
-    alt: string,
-    id: string
-}[], galleryRef: RefObject<HTMLDivElement | null>) => {
+export const UseGallerySectionGSAPHook = (imageSrc: string[], galleryRef: RefObject<HTMLDivElement | null>) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
@@ -22,17 +18,16 @@ export const UseGallerySectionGSAPHook = (images: HTMLImageElement[] | {
         });
 
         images.forEach((image: HTMLImageElement) => {
-            image.style.opacity = '0';
             gsap.to(image, {
-                duration: 0.75,
+                duration: 0.5,
                 filter: 'grayScale(0)',
                 scrollTrigger: {
                     trigger: image,
-                    start: "-=100",
-                    end: "center ",
+                    start: "-=50",
+                    end: '55% center',
                     toggleActions: "play reverse play reset",
                 },
             });
         });
-    }, [images]);
+    }, [imageSrc]);
 }
