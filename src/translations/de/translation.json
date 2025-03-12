@@ -1,9 +1,169 @@
 {
-  "menu": {
-    "home": "Kezdőlap",
-    "about": "Rólunk",
-    "services": "Szolgáltatások",
-    "contact": "Kapcsolat",
-    "menu": "Menü"
-  }
+  "site": {
+    "title": "Kis Brigi Tattoo",
+    "description": "Handgefertigter Schmuck - Herstellung und Verkauf"
+  },
+  "navbar": {
+    "menu": "Menü",
+    "contact": "Kontakt"
+  },
+  "sidebar": {
+    "gallery": "Galerie",
+    "about": "Über mich",
+    "booking": "Terminbuchung",
+    "info": "Informationen"
+  },
+  "aboutMe": {
+    "quote": "Wow, du zeichnest so schön!\nKönntest du auch etwas für mich zeichnen?",
+    "phrase1": "– vielleicht war das der motivierendste Satz während meiner Kindheit. In der Schule konnte ich den Kunstunterricht und die Pausen kaum erwarten, denn das war die Zeit, in der ich wirklich der Star der Klasse sein konnte. Irgendwie begann alles dort, mit Tigern, die mit schwarzen Markern gezeichnet wurden.",
+    "phrase2": "Später begab ich mich in die primitive Tattoo-Welt Ungarns ohne formale Ausbildung, mit einem Portfolio von gezeichneten Designs und unerschütterlicher Entschlossenheit, im Alter von 17 Jahren. Viele wiesen mich ab, einige halfen mir, und während der Sommerzeit am Balaton durfte ich dem Geschehen recht nahe kommen. Ich begann meine offizielle Arbeit als Tätowiererin im Team von Celtic Moon Tattoo und arbeitete mit James zusammen, von dem ich diesen wunderbaren Beruf wirklich erlernte.",
+    "phrase3": "Ohne Kunstschulen habe ich durch das Tätowieren viel gelernt, aber vielleicht habe ich mich sogar selbst entdeckt.",
+    "phrase4": "Seitdem sind viele Jahre vergangen, und jetzt arbeite ich in meinem eigenen Studio, tätowiere gelegentlich als Gast im Ausland und bin sehr glücklich, Tätowiererin zu sein. 😸"
+  },
+  "info": [
+    {
+      "id": "info",
+      "title": "Informationen",
+      "summary": "Ein Kunde pro Tag <br> -Wie sieht mein Arbeitsprozess aus?",
+      "text": [
+        "Ein Kunde pro Tag \n -Wie sieht mein Arbeitsprozess aus?"
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Design.",
+      "summary": "<p>Wir treffen uns um 11 Uhr im Studio, um deine Ideen zu besprechen. <br>Während unseres Gesprächs erstelle ich das Design, um das Endergebnis persönlicher zu gestalten.</p> <p> Wenn wir beide mit dem Design zufrieden sind, beginnt das eigentliche Tätowieren.</p>",
+      "text": [
+        "Wir treffen uns um 11 Uhr im Studio, setzen uns hin und unterhalten uns ein wenig. Ich frage, was du tätowiert haben möchtest, was deine Idee ist, ob du ein bestimmtes Bild oder nur Beispiele hast, oder vielleicht keines von beiden. Manchmal haben die mitgebrachten Bilder nicht die beste Qualität oder sind für das gewünschte Thema nicht ausdrucksstark genug. In solchen Fällen helfe ich und schlage bessere Ideen vor.",
+        "Ein schönes Bild mag an einer Wand gut aussehen, funktioniert aber nicht unbedingt gut als Tattoo.",
+        "Während unseres Gesprächs erstelle ich das Design (ich zeichne von Hand oder bearbeite es am Computer). Das kann 1-2 Stunden dauern, aber in dieser Zeit lerne ich dich ein bisschen kennen, und das Ergebnis wird persönlicher sein.",
+        "Wenn das Design fertig ist und wir beide damit zufrieden sind, beginnen wir mit dem Tätowieren."
+      ]
+    },
+    {
+      "id": "process",
+      "title": "Tätowieren.",
+      "summary": "<p>Wir machen stündlich Pausen, die Zeit zum Essen und Trinken bieten. Das ist wichtig, da du typischerweise 4-6 Stunden bei mir verbringen wirst.</p> <p> Zur Schmerzlinderung kannst du Medikamente mitbringen, die du kennst, aber lass uns darüber sprechen. </p>",
+      "text": [
+        "Wir machen ungefähr jede Stunde Pausen, damit wir essen und trinken können (mein Studio hat eine Küche mit Kühlschrank und Mikrowelle), also kannst du Essen mitbringen oder bestellen. Das ist wichtig, denn du verbringst typischerweise 4-6 Stunden bei mir, und es ist keine gute Idee, hungrig zu bleiben, da dir schlecht werden könnte!",
+        "Zur Schmerzlinderung kannst du Medikamente mitbringen, von denen du weißt, dass sie bei dir wirken (Flector, Advil, Cataflam, usw.). Ich verwende keine Betäubungsmittel auf Lidocain-Basis, also wenn du planst, so etwas zu verwenden, lass uns bitte darüber sprechen.",
+        "Was viel wichtiger ist: Komme ausgeruht und mental vorbereitet!"
+      ]
+    },
+    {
+      "id": "finish",
+      "title": "Abschluss.",
+      "summary": "Am Ende des Tages wasche ich dein Tattoo mit antiseptischer Seife und bedecke es dann mit einer speziellen Tattoo-Bandage namens Dry lock pad, danach besprechen wir die Nachsorge.",
+      "text": [
+        "Wenn das Kunstwerk fertig ist oder die für den Tag geplante Fortsetzung abgeschlossen ist, wasche ich dein Tattoo mit antiseptischer Seife und fotografiere es (diese Fotos können als Teil meines Portfolios im Internet veröffentlicht werden, natürlich ohne Gesichter und Namen, und ich markiere niemanden in sozialen Medien).",
+        "Danach bedecke ich es mit einer speziellen Tattoo-Bandage namens Dry lock pad, wir besprechen die Nachsorge, und ich gebe dir gedruckte Anweisungen für zu Hause mit."
+      ]
+    },
+    {
+      "id": "aftercare",
+      "title": "Nachsorge.",
+      "summary": "Der Schutzverband kann nach 8 Stunden entfernt werden, dann wasche die tätowierte Stelle mit Wasser, eventuell auch mit antiseptischer Seife. \n Trage dann 3 mal täglich Bepanthten-Creme mit sauberen Händen für 1-1,5 Wochen auf.",
+      "text": [
+        "Der Schutzverband (Dry lock pad) kann nach 8 Stunden entfernt werden, dann wasche die tätowierte Stelle mit Wasser, eventuell auch mit antiseptischer Seife.",
+        "Benutze kein Handtuch zum Trocknen! Lass es wenn möglich an der Luft trocknen, trage dann eine dünne Schicht Bepanthten-Creme auf (ich empfehle nicht die Salbe, da sie zu fettig ist und nicht gut einzieht). Mit dünner Schicht meine ich, dass keine überschüssige Creme auf der Haut bleiben sollte! (Verwende andere Heilcremes nur, wenn du allergisch auf Bepanthen reagierst, und nur nach Rücksprache mit mir)",
+        "Trage die Creme 3 mal täglich mit sauberen Händen auf!",
+        "<span className=\"bg-lime-600\">Maximal 1-1,5 Wochen.</span>",
+        "Danach ist es ratsam, die Haut weiterhin mit Körperlotion zu pflegen."
+      ],
+      "list": [
+        {
+          "title": "VERBOTEN (erste 2-3 Tage):",
+          "items": [
+            "starkes Schwitzen",
+            "an der Wunde kratzen, sie Infektionen aussetzen"
+          ]
+        },
+        {
+          "title": "(2-3 Wochen): ",
+          "items": [
+            "Einweichen",
+            "Saunen",
+            "Solarien/Sonnenbäder",
+            "Kratzen (Juckreiz ist normal, er gehört zum Heilungsprozess)",
+            "Abziehen während des Schälens",
+            "mehr Creme auftragen als vorgeschrieben"
+          ]
+        }
+      ],
+      "text2": [
+        "Langfristig werden alle Tattoos durch die UV-Strahlung der Sonne beschädigt, daher wird empfohlen, Solarien und Sonnenbäder auf der tätowierten Stelle zu vermeiden und Sonnenschutzmittel mit hohem Lichtschutzfaktor zu verwenden.",
+        "Nach dem Tätowieren regeneriert sich die Epithelschicht der Haut 6 Monate lang, sie ist also nicht so dick und bietet dem Körper nicht so viel Schutz wie intakte Haut! In dieser Zeit muss sie durch Abdecken vor der Sonne geschützt werden, Sonnenschutzmittel allein reicht nicht aus!",
+        "<div> Bei Problemen melde dich, stelle Fragen!!! </div>"
+      ]
+    },
+    {
+      "id": "finances",
+      "title": "Finanzielles.",
+      "summary": "Design – 5.000 HUF/Stunde <br> Tätowieren – 20.000 HUF/Stunde <br> Mindesttagessatz – 50.000 HUF / Maximaler Tagessatz – 100.000 HUF",
+      "text": [
+        "Ich habe versucht, ein faires Preissystem zu entwickeln, das zwischen Stunden- und Tagessätzen liegt, damit du mich sowohl für kleinere* als auch für größere Tattoos aufsuchen kannst.",
+        "Design – 5.000 HUF/Stunde",
+        "Tätowieren – 20.000 HUF/Stunde",
+        "Mindesttagessatz – 50.000 HUF",
+        "Maximaler Tagessatz – 100.000 HUF"
+      ]
+    },
+    {
+      "id": "requests",
+      "title": "Für welche Art von Anfragen solltest du mich wählen?",
+      "summary": "<p> <b>Was zu mir passt: </b> Lebende Dinge – Tiere, Menschen, fiktive Kreaturen. 'Im Stil' – realistisch (lebensecht), surreal, märchenhaft (cartoonartig, Comic-Stil). Ich mag auch neue Trends! * Ich freue mich über die Erstellung von farbigen sowie schwarz-weißen Arbeiten. </p> <p> <b>Was nicht zu mir passt:</b> Traditionelle Stammesmuster – Maori, Japanisch (diese historisch bedeutsamen Muster haben komplexe Symbolsysteme, über die ich wenig weiß) </br> Horror-Themen oder negative Themen. </p> <p><b>Was ich nicht akzeptieren werde:</b> Die Fortsetzung, Ausbesserung oder Überdeckung der Arbeit eines anderen Tätowierers. </br> Cover-ups nur in sehr einzigartigen Fällen, wo ich sehen kann, dass ich ein vollwertiges Endergebnis schaffen kann. (Hier empfehle ich oft zuerst eine Laser-Verblassung, die lange dauern kann, aber ich kann darauf viel schönere Lösungen gestalten.) </br> Text/Schriftzüge, winzige Tattoos (nur wenige Zentimeter). </br> *Wenn ich mehrere kleinere Tattoos an einem Tag bei einem Kunden erstellen kann, ist das sicherlich möglich.</p>",
+      "text": [
+        "<div>Da ich schon lange tätowiere, ist meine Arbeit vielseitig, und ich habe mich nicht streng auf einen Stil spezialisiert. Natürlich gibt es Aufgaben, die mir besser liegen (für Körper und Seele), daher werde ich diesen den Vorzug geben, und es wird Anfragen geben, die ich ablehne. </div>",
+        "<div>Was zu mir passt:  </div> ",
+        "<div>Lebende Dinge – Tiere, Menschen, fiktive Kreaturen. </br> 'Im Stil' – realistisch (lebensecht), surreal, märchenhaft (cartoonartig, Comic-Stil). </br> Ich mag auch neue Trends! * </br> Ich freue mich über die Erstellung von farbigen sowie schwarz-weißen Arbeiten.",
+        "<div>Was nicht zu mir passt:</div>",
+        "<div>Traditionelle Stammesmuster – Maori, Japanisch (diese historisch bedeutsamen Muster haben komplexe Symbolsysteme, über die ich wenig weiß) </br> Horror-Themen oder negative Themen. </br> <div>",
+        "<div>Was ich nicht akzeptieren werde:</div>",
+        "<div>Die Fortsetzung, Ausbesserung oder Überdeckung der Arbeit eines anderen Tätowierers. </br> Cover-ups nur in sehr einzigartigen Fällen, wo ich sehen kann, dass ich ein vollwertiges Endergebnis schaffen kann. (Hier empfehle ich oft zuerst eine Laser-Verblassung, die lange dauern kann, aber ich kann darauf viel schönere Lösungen gestalten.) </br> Text/Schriftzüge, winzige Tattoos (nur wenige Zentimeter). </br> *Wenn ich mehrere kleinere Tattoos an einem Tag bei einem Kunden erstellen kann, ist das sicherlich möglich. </div>"
+      ]
+    },
+    {
+      "id": "patience",
+      "title": "Warum ist deine Geduld wichtig?",
+      "summary": "<p>Du kannst bei mir nur per E-Mail buchen.</p> <p> <b>Im August</b> gebe ich Termine von <b>September</b> bis <b>Januar</b> frei. <br> <b>Im Dezember</b> gebe ich Termine von <b>Januar</b> bis <b>Mai</b> frei. <p> Im Sommer arbeite ich weniger, nach individueller Vereinbarung, aus zwei technischen Gründen: Ich ruhe mich aus, und die Sommersonne ruiniert meine frische Arbeit fast vollständig </p>",
+      "text": [
+        "Im Laufe der Jahre haben viele von euch meine Arbeit lieben gelernt, und immer mehr Menschen kontaktieren mich. Darüber freue ich mich sehr, denn ich kann jeden Tag kreativ sein und mich selbst verwirklichen. Schwierig ist jedoch die effiziente Organisation meiner Zeit.",
+        "Ein Tattoo ist kein Brot, und ich bin bei jeder Aufgabe auf mich allein gestellt."
+      ],
+      "text2": [
+        "Es ist also am besten, mir im August und Dezember zu schreiben, denn dann kann ich mich effektiv damit befassen."
+      ],
+      "list": [
+        {
+          "title": "Daher arbeite ich nach folgendem System:",
+          "items": [
+            "du kannst bei mir nur per E-Mail buchen",
+            "Im August gebe ich Termine von September bis Januar frei",
+            "Im Dezember gebe ich Termine von Januar bis Mai frei",
+            "Im Sommer arbeite ich weniger, nach individueller Vereinbarung, aus zwei technischen Gründen: Ich ruhe mich aus, und die Sommersonne ruiniert meine frische Arbeit fast vollständig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waitingList",
+      "title": "\"Wann kannst du mir einen Termin geben, wie lang ist die Warteliste?\"",
+      "summary": "",
+      "neededOnInfo": false,
+      "text": [],
+      "list": [
+        {
+          "title": null,
+          "items": [
+            "Ich weiß es nicht",
+            "wenn du keinen Termin oder vielleicht keine Antwort auf deine E-Mail bekommen hast, sei bitte nicht beleidigt; wenn du sicher bist, dass ich deine Anfrage gerne annehmen würde, schreibe nochmal! Es ist möglich, dass ich es nicht bemerkt habe, du nicht bearbeitet wurdest, usw.",
+            "wenn ich meinen Kalender wieder öffne, werde ich immer zuerst Kunden einplanen, deren Tattoos noch unvollendet sind oder deren Termine abgesagt werden mussten (z.B. wegen Krankheit)"
+          ]
+        }
+      ],
+      "text2": [
+        "Wenn du all dies gelesen hast, hast du mir bereits sehr in meiner Arbeit geholfen, damit ich mehr Zeit zum Tätowieren habe! 🙂"
+      ]
+    }
+  ]
 }
