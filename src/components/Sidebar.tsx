@@ -71,15 +71,15 @@ const Sidebar = () => {
         );
     }
 
-    const commonClasses = "inset-0 flex w-screen h-screen fixed z-50 transition duration-700 -translate-x-full";
+    const commonClasses = "inset-0 flex w-screen h-screen fixed z-50 transition duration-700 -translate-y-full";
 
     return (
         <div className={isOpen ? "side-bar-open" : "side-bar-closed"}>
             <div
-                className={cn(commonClasses, "bg-[--darkRed]", isOpen ? 'translate-x-0' : 'delay-100')}>
+                className={cn(commonClasses, "bg-[--darkRed]", isOpen ? 'translate-y-0' : 'delay-100')}>
             </div>
 
-            <div className={cn(commonClasses, "bg-[--primaryDark]", isOpen ? 'translate-x-0 delay-300 ' : '')}>
+            <div className={cn(commonClasses, "bg-[--primaryDark]", isOpen ? 'translate-y-0 delay-300 ' : '')}>
                 <div className="w-full flex flex-col justify-center gap-5 pl-[10%] ">
                     {sideBarLinks.map(({key, text, href}) =>
                         <SidebarLinkElement key={key} text={text} href={href}/>)}

@@ -5,25 +5,47 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {RefObject} from "react";
 
-export const useGsapVideoSection = (sectionRef: RefObject<HTMLDivElement | null >) => {
+export const useGsapVideoSection = (sectionRef: RefObject<HTMLDivElement | null>) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
-        const scrollAnim = gsap.timeline({
+        const timeline = gsap.timeline({
             scrollTrigger: {
                 scrub: 1,
-                pin: false,
+                pin: true,
                 trigger: sectionRef.current,
-                start: "-=100 top",
-                end: "top",
+                start: "top top",
+                end: "+=1000",
+                markers: true,
             },
         });
 
-        scrollAnim.to(
-            '#video-section img',
-            {
-                filter: 'none',
-            },
-        )
+        timeline
+            .add('start')
+            .to(
+                '#video-section img',
+                {
+                    duration: 0.5,
+                    ease: 'power1.inOut',
+                    scale: 1
+                },
+                'start'
+            )
+            .to(
+                '#video-section .video-text', {
+                    gap: 0,
+                    justifyContent: 'center',
+                    attr: {['data-active']: 1},
+                    opacity: 1
+                },
+                'start'
+            )
+            .to('#video-section .video-text span',
+                {
+                    borderBottom: '2px solid white',
+                    borderTop: '2px solid white',
+                    duration: 0.5,
+                    ease: 'power1.in'
+                })
     });
 }

@@ -22,8 +22,8 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
                 </MenuStateProvider>
             </LanguageProvider>
         </UserDeviceProvider>
-        <SpeedInsights/>
-        <Analytics/>
+        {/*<SpeedInsights/>*/}
+        {/*<Analytics/>*/}
         </body>
         </html>
     );

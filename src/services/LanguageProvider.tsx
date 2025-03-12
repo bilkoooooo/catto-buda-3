@@ -42,10 +42,10 @@ export const LanguageProvider = ({children}: { children: ReactNode }) => {
 
     useEffect(() => {
         const langInLocalStorage: string | null = localStorage.getItem('language');
-
-        if (langInLocalStorage) changeLanguage?.(langInLocalStorage);
-
-    }, [changeLanguage]);
+        if (typeof window !== 'undefined' && langInLocalStorage && langInLocalStorage !== language) {
+            changeLanguage?.(langInLocalStorage);
+        }
+    }, [changeLanguage, language]);
 
     return (
         <LanguageContext.Provider value={{language, changeLanguage, languageData}}>

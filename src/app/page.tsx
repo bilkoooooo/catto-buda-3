@@ -29,11 +29,11 @@ export default function Home() {
 
                 <AboutMeSection/>
 
-                <InfoSection/>
+                {/*<InfoSection/>*/}
 
-                <GallerySection/>
+                {/*<GallerySection/>*/}
 
-                <Placeholder/>
+                {/*<Placeholder/>*/}
             </div>
         </>
     );
