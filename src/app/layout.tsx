@@ -6,6 +6,7 @@ import Sidebar from "@components/Sidebar";
 import {LanguageProvider} from "@services/LanguageProvider";
 import {UserDeviceProvider} from "@services/UserDeviceProvider";
 import {SpeedInsights} from "@vercel/speed-insights/next"
+import {Analytics} from "@vercel/analytics/react"
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
@@ -22,6 +23,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             </LanguageProvider>
         </UserDeviceProvider>
         <SpeedInsights/>
+        <Analytics/>
         </body>
         </html>
     );
