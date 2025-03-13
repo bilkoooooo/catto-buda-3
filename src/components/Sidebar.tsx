@@ -4,6 +4,7 @@ import React, {useContext} from "react";
 import {cn} from "@lib/utils";
 import {MenuStateContext} from "@services/MenuStateProvider";
 import {LanguageContext} from "@services/LanguageProvider";
+import {usePathname, useRouter} from "next/navigation";
 
 type SidebarLink = {
     key: string;
@@ -12,19 +13,23 @@ type SidebarLink = {
 }
 
 const Sidebar = () => {
-    const {isOpen,setIsOpen} = useContext(MenuStateContext);
+    const {isOpen, setIsOpen} = useContext(MenuStateContext);
     const {
         languageData: {
             sidebar
         }
     } = useContext(LanguageContext);
 
+    const pathname = usePathname();
+
+    const router = useRouter()
+
     const {
         gallery,
         about,
         booking,
         info
-    } = sidebar || {gallery: "Gallery", about: "About", booking: "Booking", info: "Info"};
+    } = sidebar;
 
     const sideBarLinks = [
         {
@@ -49,15 +54,25 @@ const Sidebar = () => {
         }
     ];
 
+    const ScrollToElem = (elem: Element | null) => elem?.scrollIntoView?.({behavior: "smooth"})
+
     const onLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         const href = e.currentTarget.getAttribute("href");
-        if (href) {
-            const element = document.querySelector(href);
-            if (element) {
-                element.scrollIntoView({behavior: "smooth"});
-                setIsOpen(false);
+
+        if (!href) {
+            return;
+        }
+
+        setIsOpen(false);
+
+        if (href?.includes('#')) {
+            if (pathname === '/') {
+                ScrollToElem(document.querySelector(href))
             }
+            router.push(`/${href}`);
+        } else {
+            router.push(href);
         }
     }
 

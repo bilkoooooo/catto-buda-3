@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import {FaEnvelope} from "react-icons/fa";
 import {MenuStateContext} from "@services/MenuStateProvider";
 import {LanguageContext} from "@services/LanguageProvider";
@@ -39,7 +39,7 @@ export default function Navbar() {
         navbar: {
             contact,
             menu
-        }
+        },
     } = useContext(LanguageContext).languageData;
 
     const {changeLanguage} = useContext(LanguageContext);
@@ -65,11 +65,6 @@ export default function Navbar() {
             </div>
         )
     }
-
-
-    useEffect(() => {
-        console.log(menu);
-    }, [menu]);
 
     const {isOpen, setIsOpen} = useContext(MenuStateContext);
 

@@ -1,19 +1,10 @@
-'use client';
-
-import {Bebas_Neue} from 'next/font/google'
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {cn} from "@lib/utils";
 
-const bebasNeue = Bebas_Neue({
-    weight: ['400'],
-    subsets: ['latin'],
-});
+export const useLogoSectionGSAPHook = () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
-
-export const LogoSection = () => {
     useGSAP(() => {
         const scrollAnim = gsap.timeline({
             scrollTrigger: {
@@ -39,15 +30,5 @@ export const LogoSection = () => {
                 display: 'none',
             },
         );
-    });
-
-    return (
-        <section id="logo-section"
-                 className={cn("flex center justify-center items-center text-center z-40 w-full min-h-0 h-screen fixed inset-0 m-0", bebasNeue.className)}>
-            <div id={"text"} className="text-8xl uppercase min-h-0">
-                Kis Brigi<br/>
-                <strong>Tattoo</strong>
-            </div>
-        </section>
-    )
+    }, []);
 }

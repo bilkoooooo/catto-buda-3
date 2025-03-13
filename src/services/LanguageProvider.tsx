@@ -1,10 +1,9 @@
 'use client';
 
-import {createContext, ReactNode, useCallback, useContext, useEffect, useState} from "react";
+import {createContext, ReactNode, useCallback, useEffect, useState} from "react";
 import huTranslation from "@/src/translations/hu/translation.json";
 import enTranslation from "@/src/translations/en/translation.json";
 import deTranslation from "@/src/translations/de/translation.json";
-import {UserDeviceContext} from "@services/UserDeviceProvider";
 import {LanguageDataType} from "@services/LanguageDataTypes";
 
 interface LanguageContextType {
@@ -14,9 +13,9 @@ interface LanguageContextType {
 }
 
 export const LanguageContext = createContext<LanguageContextType>({
-    language: 'hu',
+    language: '' as string,
     changeLanguage: null as unknown as (lang: string) => void,
-    languageData: huTranslation,
+    languageData: huTranslation as LanguageDataType,
 });
 
 const Languages = {
@@ -26,12 +25,9 @@ const Languages = {
 } as { [key: string]: LanguageDataType };
 
 export const LanguageProvider = ({children}: { children: ReactNode }) => {
-    const userDevice = useContext(UserDeviceContext);
 
-    const defaultLang = userDevice?.deviceLanguage ?? 'hu';
-
-    const [language, setLanguage] = useState(defaultLang);
-    const [languageData, setLanguageData] = useState<LanguageDataType>(Languages[defaultLang]);
+    const [language, setLanguage] = useState('hu');
+    const [languageData, setLanguageData] = useState<LanguageDataType>(Languages['hu']);
 
     const changeLanguage = (useCallback(async (lang: string): Promise<void> => {
         if (lang === language) return;

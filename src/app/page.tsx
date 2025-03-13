@@ -1,14 +1,14 @@
 'use client';
 
+import {HeaderSection} from "@components/HeaderSection/HeaderSection";
+import {VideoSection} from "@components/VideoSection/VideoSection";
 import {AboutMeSection} from "@components/AboutMeSection/AboutMeSection";
-import {HeaderSection} from "@components/HeaderSection";
 import {InfoSection} from "@components/InfoSection/InfoSection";
+import {GallerySection} from "@components/GallerySection/GallerySection";
 import {LanguageContext} from "@services/LanguageProvider";
 import {useContext} from "react";
 import bgDark from "@assets/bg_dark.jpg";
 import {Placeholder} from "@components/common/Placeholder";
-import {VideoSection} from "@components/VideoSection/VideoSection";
-import {GallerySection} from "@components/GallerySection/GallerySection";
 
 export default function Home() {
     const {
@@ -29,11 +29,11 @@ export default function Home() {
 
                 <AboutMeSection/>
 
-                {/*<InfoSection/>*/}
+                <InfoSection/>
 
-                {/*<GallerySection/>*/}
+                <GallerySection/>
 
-                {/*<Placeholder/>*/}
+                <Placeholder/>
             </div>
         </>
     );

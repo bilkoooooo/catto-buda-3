@@ -31,10 +31,10 @@ export const GallerySection = () => {
     )
 
     return (
-        <div id="gallery-section" ref={galleryRef} className="w-screen min-h-screen relative">
+        <section id="gallery-section" ref={galleryRef} className="w-screen min-h-screen relative">
             <ImageList images={images}/>
             <SelfPromo/>
             {/*{imageToShow && <ImageViewerComponent imgIndex={imageToShow} gallery={gallery} onClose={() => setImageToShow(null)}/>}*/}
-        </div>
+        </section>
     );
 }
