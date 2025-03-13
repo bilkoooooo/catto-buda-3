@@ -11,7 +11,10 @@ export const GallerySection = () => {
     const galleryRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        fetch('/api/gallery')
+        fetch('/api/gallery', {
+            method: 'POST',
+            body: JSON.stringify({limit: 10, offset: 0}),
+        })
             .then((response) => response.json())
             .then(({images}) => setImages(images))
     }, []);
@@ -19,9 +22,9 @@ export const GallerySection = () => {
     UseGallerySectionGSAPHook(images, galleryRef);
 
     const SelfPromo = () => (
-        <div className={"self-promo flex justify-center items-center -translate-x-full"}>
+        <div className={"self-promo justify-center items-center -translate-x-full hidden"}>
             <div>
-                További képekért látogass el a <a href={"/gallery"}>galériába</a>
+                További képekért látogass el a <a href={"/gallery"}>gallériába</a>
             </div>
             <div>
                 vagy kövess instán: <a
@@ -31,7 +34,8 @@ export const GallerySection = () => {
     )
 
     return (
-        <section id="gallery-section" ref={galleryRef} className="w-screen min-h-screen relative">
+        <section id="gallery-section" ref={galleryRef}
+                 className="w-screen min-h-screen relative flex content-center justify-center">
             <ImageList images={images}/>
             <SelfPromo/>
             {/*{imageToShow && <ImageViewerComponent imgIndex={imageToShow} gallery={gallery} onClose={() => setImageToShow(null)}/>}*/}

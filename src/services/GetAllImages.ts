@@ -10,7 +10,7 @@ if (!existsSync(GALLERY_DIR)) {
     useStaticImages = true;
 }
 
-export const getAllFiles = async () => {
+export const getAllFiles = async ({limit = 10, offset = 0}: { limit: number, offset?: number }) => {
     if (useStaticImages) {
         return {
             useStaticImages,
@@ -25,12 +25,12 @@ export const getAllFiles = async () => {
                 "https://kisbrigi.com/wp-content/uploads/2024/07/erdonepec-921x1024.jpg",
                 "https://kisbrigi.com/wp-content/uploads/2024/07/nflc-982x1024.jpg",
                 "https://kisbrigi.com/wp-content/uploads/2023/09/juhaszc-1-871x1024.jpg"
-            ]
+            ].slice(offset, limit)
         }
     }
 
     return {
         useStaticImages,
-        images: readdirSync(GALLERY_DIR).map((file) => `/gallery/${file}`)
+        images: readdirSync(GALLERY_DIR).map((file) => `/gallery/${file}`).slice(offset, limit)
     }
 };

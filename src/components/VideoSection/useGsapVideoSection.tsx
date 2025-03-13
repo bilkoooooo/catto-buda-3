@@ -16,7 +16,6 @@ export const useGsapVideoSection = (sectionRef: RefObject<HTMLDivElement | null>
                 trigger: sectionRef.current,
                 start: "top top",
                 end: "+=1000",
-                markers: true,
             },
         });
 
@@ -46,6 +45,8 @@ export const useGsapVideoSection = (sectionRef: RefObject<HTMLDivElement | null>
                     borderTop: '2px solid white',
                     duration: 0.5,
                     ease: 'power1.in'
-                })
+                },
+                'start'
+            );
     });
 }
