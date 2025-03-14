@@ -36,3 +36,16 @@
         }
     }
 }
+
+.panel {
+    .panel-child {
+    }
+
+    &:nth-child(odd) .panel-child {
+        transform: translateX(-150%);
+    }
+
+    &:nth-child(even) .panel-child {
+        transform: translateX(150%);
+    }
+}

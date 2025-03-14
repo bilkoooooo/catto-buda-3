@@ -8,9 +8,9 @@ export const useLogoSectionGSAPHook = () => {
     useGSAP(() => {
         const scrollAnim = gsap.timeline({
             scrollTrigger: {
+                trigger: '#header-section',
                 scrub: 1,
                 pin: false,
-                trigger: '#header-section',
                 start: "top top",
                 endTrigger: "#top-section",
                 end: "+=150",

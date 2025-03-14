@@ -25,13 +25,13 @@ export default function Home() {
                  style={{backgroundImage: `url(${bgDark.src})`}}>
                 <HeaderSection/>
 
-                <VideoSection/>
+                {/*<VideoSection/>*/}
 
-                <AboutMeSection/>
+                {/*<AboutMeSection/>*/}
 
                 <InfoSection/>
 
-                <GallerySection/>
+                {/*<GallerySection/>*/}
 
                 <Placeholder/>
             </div>

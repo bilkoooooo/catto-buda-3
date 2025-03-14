@@ -14,9 +14,15 @@ interface PanelsProps {
 export const Panels = ({info}: PanelsProps) => {
     const {title, summary, id} = info;
     return (
-        <div id={id} className={cn(`panel grow-1 shrink-0 basis-full w-screen py-2 md:py-20 px-2 md:px-8 flex snap-start`)}>
+        <div id={id}
+             className={cn(`panel flex py-2 md:py-8 px-2 md:px-8 snap-start relative overscroll-y-auto`)}>
             <div
-                className="max-w-[720px] basis-full lg:basis-2/3 min-h-1/2 h-fit max-h-[70%] bg-white bg-opacity-40 self-center justify-center backdrop-blur-lg p-4 md:p-8 rounded-lg drop-shadow-lg flex flex-col items-start gap-2 md:gap-4 overflow-hidden [text-shadow:_2px_2px_10px_rgb(0_0_0_/_100%)]">
+                className={cn(
+                    "panel-child max-w-[45%] bg-darkRed box-shadow-lg",
+                    "self-center justify-center p-4 md:p-8 rounded-lg flex flex-col",
+                    "items-start gap-2 md:gap-4 [text-shadow:_2px_2px_10px_rgb(0_0_0_/_100%)]",
+                )
+                }>
                 <Title title={title}/>
                 {summary && <Text>
                     {parse(summary)}
