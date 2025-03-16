@@ -30,7 +30,7 @@ const MENU_OPEN = () => (
     </svg>
 );
 
-export default function Navbar() {
+export function Navbar() {
     const {navbarRef} = useContext(MenuStateContext);
     const {
         navbar: {

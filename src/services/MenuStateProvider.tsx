@@ -10,8 +10,7 @@ interface MenuStateContextType {
 
 export const MenuStateContext = createContext<MenuStateContextType>({
     isOpen: false,
-    setIsOpen: () => {
-    },
+    setIsOpen: () => {},
     navbarRef: null
 });
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import {cn} from "@lib/utils";
+import {cn, shuffle} from "@lib/utils";
 
 export const ImageList = ({images}: { images: string[] }) => (
     <div id={"img-gallery"}
@@ -10,7 +10,7 @@ export const ImageList = ({images}: { images: string[] }) => (
              "[&>*:nth-child(odd)]:mb-20",
              "[&>*:nth-child(even)]:mt-20",
          )}>
-        {images.slice(0, 4).map((image, index) => {
+        {shuffle(images).slice(0, 4).map((image, index) => {
             return (
                 // <div className={"relative"} key={index}>
                 <Image

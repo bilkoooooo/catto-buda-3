@@ -13,6 +13,7 @@ export type SidebarType = {
     about: string;
     booking: string;
     info: string;
+    language: string;
 }
 
 export type AboutMeType = {

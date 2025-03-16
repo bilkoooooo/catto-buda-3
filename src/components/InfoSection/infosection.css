@@ -38,14 +38,37 @@
 }
 
 .panel {
-    .panel-child {
+    transition: .4s;
+
+    .svg-container {
+        top: 0;
+        bottom: 0;
+        transition: .3s;
+    }
+
+    @media screen and (max-width: 768px) {
+        .svg-container {
+            inset: -20px 0 auto 0 !important;
+        }
     }
 
     &:nth-child(odd) .panel-child {
         transform: translateX(-150%);
+
+        .svg-container {
+            right: -20px;
+        }
     }
 
     &:nth-child(even) .panel-child {
         transform: translateX(150%);
+
+        .svg-container {
+            left: -20px;
+        }
+    }
+
+    .svg-container.active {
+        color: white !important;
     }
 }

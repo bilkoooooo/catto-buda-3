@@ -15,7 +15,7 @@ export const HeaderSection = () => {
                     priority
                 />
             </section>
-            {/*<LogoSection/>*/}
+            <LogoSection/>
         </>
     )
 }

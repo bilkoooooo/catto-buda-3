@@ -22,21 +22,26 @@ export default {
                 darkRed: "var(--darkRed)",
                 lightRed: "var(--lightRed)"
             },
+            backgroundOpacity : {
+                '15': '0.15',
+                '35': '0.35',
+                '65': '0.65',
+            }
         },
     },
     plugins: [
         function ({addUtilities}: { addUtilities: any }) {
             const newUtilities = {
-                '.text-stroke-1-2': {
+                '.text-stroke-darkRed': {
                     '-webkit-text-stroke-width': '1.2px',
                     '-moz-text-stroke-width': '1.2px',
-                },
-                '.text-stroke-darkRed': {
                     '-webkit-text-stroke-color': 'var(--darkRed)',
                     '-moz-text-stroke-color': 'var(--darkRed)',
                     'color': 'transparent',
                 },
                 '.text-stroke-lightRed': {
+                    '-webkit-text-stroke-width': '1.2px',
+                    '-moz-text-stroke-width': '1.2px',
                     '-webkit-text-stroke-color': 'var(--lightRed)',
                     '-moz-text-stroke-color': 'var(--lightRed)',
                     'color': 'transparent',

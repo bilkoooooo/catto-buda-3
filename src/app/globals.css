@@ -95,3 +95,29 @@ section {
         }
     }
 }
+
+.text-stroke-lightRed  {
+    font-size: 36px;
+    font-weight: bolder;
+    transition: .4s;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    &:hover {
+        color: var(--lightRed)!important;
+    }
+
+    svg {
+        color: inherit;
+    }
+
+    @media screen and (max-width: 768px) {
+        opacity: 80%;
+        color: var(--darkRed)!important;
+        font-weight: normal;
+
+        &:hover {
+            opacity: 100%;
+        }
+    }
+}

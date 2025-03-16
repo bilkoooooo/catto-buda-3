@@ -35,7 +35,7 @@ export const GallerySection = () => {
 
     return (
         <section id="gallery-section" ref={galleryRef}
-                 className="w-screen min-h-screen relative flex content-center justify-center">
+                 className="w-screen min-h-screen relative flex content-center justify-center bg-gray-900/50">
             <ImageList images={images}/>
             <SelfPromo/>
             {/*{imageToShow && <ImageViewerComponent imgIndex={imageToShow} gallery={gallery} onClose={() => setImageToShow(null)}/>}*/}
