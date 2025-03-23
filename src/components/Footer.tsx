@@ -1,16 +1,6 @@
-import {ReactNode} from "react";
 import {Facebook, Instagram, } from "lucide-react";
 
 export const Footer = () => {
-
-    const Icons = ({children}: { children: ReactNode }) => {
-        return (
-            <div>
-                {children}
-            </div>
-        )
-    }
-
     return (
         <div className={"h-screen w-screen"}>
             <div className={"grid grid-cols-2 h-4/5"}>
