@@ -21,14 +21,7 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
                 throw new Error('First panel or progress bar ref is not set');
             }
 
-            console.log(progressBarElem);
-
             const sections: Element[] = gsap.utils.toArray(".panel");
-
-
-            // const sectionCount = sections.length;
-            //
-            // const svgs = [...progressBarElem?.querySelectorAll('svg')];
 
             sections.forEach((section: Element) => {
                 const childPanel = section.querySelector('.panel-child');

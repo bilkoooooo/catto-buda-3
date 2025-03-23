@@ -27,7 +27,7 @@ export const SidebarLinkList = ({setIsOpen}: { setIsOpen: React.Dispatch<React.S
         {
             key: "About",
             href: "#about-me-section",
-            text: about
+            text: about,
         },
         {
             key: "Info",

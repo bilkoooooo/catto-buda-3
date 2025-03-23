@@ -46,6 +46,13 @@ export default {
                     '-moz-text-stroke-color': 'var(--lightRed)',
                     'color': 'transparent',
                 },
+                '.text-stroke-white': {
+                    '-webkit-text-stroke-width': '1.2px',
+                    '-moz-text-stroke-width': '1.2px',
+                    '-webkit-text-stroke-color': 'white',
+                    '-moz-text-stroke-color': 'white',
+                    'color': 'transparent',
+                },
             };
 
             addUtilities(newUtilities, ['responsive', 'hover']);

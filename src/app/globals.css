@@ -96,7 +96,7 @@ section {
     }
 }
 
-.text-stroke-lightRed  {
+.side-bar .text-stroke-lightRed  {
     font-size: 36px;
     font-weight: bolder;
     transition: .4s;

@@ -1,4 +1,4 @@
-import heroinePic from '@assets/heroine.webp'
+import heroinePic from '@assets/heroine_bg.jpg'
 import {LogoSection} from "@components/HeaderSection/LogoSection";
 import Image from "next/image";
 

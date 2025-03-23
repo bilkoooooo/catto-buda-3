@@ -13,7 +13,7 @@ export const Sidebar = () => {
     const commonClasses = "inset-0 flex w-screen h-screen fixed z-50 transition duration-700 -translate-y-full";
 
     return (
-        <div className={cn(isOpen ? "side-bar-open" : "side-bar-closed")}>
+        <div className={cn ("side-bar",isOpen ? "side-bar-open" : "side-bar-closed")}>
             <div
                 className={cn(commonClasses, "bg-[--darkRed]", isOpen ? 'translate-y-0' : 'delay-100')}>
             </div>

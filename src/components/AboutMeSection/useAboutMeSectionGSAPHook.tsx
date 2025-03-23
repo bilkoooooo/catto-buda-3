@@ -12,44 +12,53 @@ export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement
         }
 
         const aboutMeSection = containerRef.current;
-        // const aboutMeText = containerRef.current.querySelector('#about-me-text');
+
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: aboutMeSection,
                 start: '-=100 center',
                 end: () => "center center",
-                toggleActions: "play none none reverse",
             },
             ease: "none"
         });
 
-        // const texts = gsap.utils.toArray('#about-me-text div') || [];
 
-        // timeline.to('#about-me-image', {
-        //     backgroundPosition: "+=10",
-        // })
+        timeline.fromTo('#about-me-text', {
+                yPercent: -100,
+                opacity: 0.6,
+                scale: 0.4
+            }, {
+                yPercent: 0,
+                opacity: 1,
+                duration: 1.5,
+                scale: 1,
+            },
+            "text"
+        )
+            .to(containerRef.current.querySelector('.image-hider'), {
+                    xPercent: 200,
+                    ease: 'power3.in',
+                    duration: 1.5,
+                },
+                'img'
+            );
 
-
-        timeline.to(containerRef.current.querySelector('.image-hider'), {
-            xPercent: 200,
-            ease: 'power3.in',
-            duration: 1.5,
-        });
-
-
-        // false && texts.forEach((el: unknown, index) => {
-        //     const element = el as Element;
-        //     timeline.fromTo(element,
-        //         {
-        //             opacity: 0.6,
-        //             xPercent: -100
-        //         },
-        //         {
-        //             opacity: 1,
-        //             xPercent: 0,
-        //             duration: 1,
-        //         }, index * 0.1);
-        // });
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: aboutMeSection,
+                start: "top top",
+                end: "bottom center",
+                onUpdate: self => {
+                    gsap.to(
+                        '#about-me-image',
+                        {
+                            objectPosition: `0 ${self.progress * 25 * self.direction}px`,
+                            duration: 0.5,
+                        },
+                    )
+                }
+            }
+        })
 
         return () => {
             timeline.reverse();

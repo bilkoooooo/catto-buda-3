@@ -12,12 +12,32 @@ const bebasNeue = Bebas_Neue({
 export const LogoSection = () => {
     useLogoSectionGSAPHook();
 
+    const AnimatedLogoDiv = ({text, classNames}: { text: string, classNames?: string }) => {
+        return (
+            <div className={"relative inline-block overflow-hidden relative w-fit"}>
+                <div className={cn(classNames, "animated-text w-[300%] flex absolute z-[50] b-0")}>
+                    <div className={"inline-block"}>{text}</div>
+                    <div className={"inline-block text-stroke-white"}>{text}</div>
+                    <div className={"inline-block"}>{text}</div>
+                </div>
+                <div className={"opacity-0 inline-block"}>{text}</div>
+            </div>
+        )
+    }
+
     return (
         <section id="logo-section"
-                 className={cn("flex center justify-center items-center text-center z-40 w-full min-h-0 h-screen fixed inset-0 m-0", bebasNeue.className)}>
+                 className={cn(
+                     "flex center justify-center items-center text-center",
+                     "z-40 w-full h-screen fixed inset-0 m-0",
+                     bebasNeue.className)}
+        >
             <div id={"text"} className="text-8xl uppercase min-h-0">
-                Kis Brigi<br/>
-                <strong>Tattoo</strong>
+                <div className={"flex gap-1"}>
+                    <AnimatedLogoDiv text={"Kis"}/>
+                    <AnimatedLogoDiv text={"Brigi"}/>
+                </div>
+                <AnimatedLogoDiv text={"Tattoo"} classNames={"  "}/>
             </div>
         </section>
     )
