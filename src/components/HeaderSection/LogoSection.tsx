@@ -14,7 +14,7 @@ export const LogoSection = () => {
 
     const AnimatedLogoDiv = ({text, classNames}: { text: string, classNames?: string }) => {
         return (
-            <div className={"relative inline-block overflow-hidden relative w-fit"}>
+            <div className={"relative inline-block overflow-hidden w-fit"}>
                 <div className={cn(classNames, "animated-text w-[300%] flex absolute z-[50] b-0")}>
                     <div className={"inline-block"}>{text}</div>
                     <div className={"inline-block text-stroke-white"}>{text}</div>

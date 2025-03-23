@@ -1,14 +1,13 @@
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useContext} from "react";
+import {LanguageContext} from "@services/LanguageProvider";
 
 export const useLogoSectionGSAPHook = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
-
-            console.log(gsap.utils.toArray('#logo-section span'));
-
             const animatedTexts = gsap.utils.toArray('#logo-section .animated-text');
             const t1 = gsap.timeline();
 
@@ -38,7 +37,6 @@ export const useLogoSectionGSAPHook = () => {
                 });
 
             t1.repeat(-1);
-
 
             const scrollAnim = gsap.timeline({
                 scrollTrigger: {
@@ -71,7 +69,7 @@ export const useLogoSectionGSAPHook = () => {
                 },
             );
         },
-        []
+        [useContext(LanguageContext).languageData]
     )
     ;
 }
