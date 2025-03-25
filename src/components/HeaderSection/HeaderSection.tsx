@@ -9,8 +9,7 @@ export const HeaderSection = () => {
                 <Image
                     src={heroinePic}
                     alt="heroine"
-                    // fill={true}
-                    className={"object-cover lg:object-fill object-left"}
+                    className={"object-cover lg:object-fill object-left w-full h-full"}
                     loading={"eager"}
                     quality={100}
                     priority={true}
