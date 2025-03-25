@@ -35,7 +35,8 @@ export const useGsapVideoSection = (sectionRef: RefObject<HTMLDivElement | null>
                     gap: 0,
                     justifyContent: 'center',
                     attr: {['data-active']: 1},
-                    opacity: 1
+                    opacity: 1,
+                    duration: 0.5
                 },
                 'start'
             )

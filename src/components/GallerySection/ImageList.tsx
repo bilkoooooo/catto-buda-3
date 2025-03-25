@@ -1,32 +1,40 @@
- import Image from "next/image";
-import React from "react";
-import {cn, shuffle} from "@lib/utils";
+'use client';
 
-export const ImageList = ({images}: { images: string[] }) => (
-    <div id={"img-gallery"}
-         className={cn(
-             "grid grid-cols-1 justify-items-center items-center lg:grid-cols-4 ",
-             "gap-4 max-w-7xl mx-auto snap-y snap-mandatory",
-             "[&>*:nth-child(odd)]:mb-20",
-             "[&>*:nth-child(even)]:mt-20",
-         )}>
-        {shuffle(images).slice(0, 4).map((image, index) => {
-            return (
-                // <div className={"relative"} key={index}>
-                <Image
+import Image from "next/image";
+import React, {useContext} from "react";
+import {cn} from "@lib/utils";
+import {GalleryImagesContext} from "@services/GalleryImagesProvider";
+
+export const ImageList = ({imgCount = 5, additionalClasses = '', imgSettings = {}}: {
+    imgCount?: number,
+    additionalClasses?: string,
+    imgSettings?: {
+        [key: string]: string | number | boolean
+    }
+}) => {
+    const {images} = useContext(GalleryImagesContext);
+
+    return (
+        <div id={"img-gallery"}
+             className={cn(
+                 "grid grid-cols-1 justify-items-center items-center md:grid-cols-2 lg:grid-cols-5",
+                 "gap-4 max-w-7xl mx-auto",
+                 additionalClasses,
+             )}>
+            {images.slice(0, imgCount).map((image, index) => {
+                return <Image
                     key={index}
                     loading={"lazy"}
                     quality={100}
-                    // fill
                     width={400}
                     height={400}
-                    // style={{width: 'auto', height: 'ato'}}
                     src={image}
                     id={"gallery_" + index}
                     alt={image}
-                    className={"p-4 duration-300 image snap-start aspect-square object-fill"}/>
-                // </div>
+                    className={"p-4 duration-300 image snap-start aspect-square object-fill"}
+                    {...imgSettings}
+                />
 
-            )
-        })}
-    </div>);
+            })}
+        </div>)
+};

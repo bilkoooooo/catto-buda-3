@@ -36,29 +36,29 @@ export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement
             "text"
         )
             .to(containerRef.current.querySelector('.image-hider'), {
-                    xPercent: 200,
+                    xPercent: -200,
                     ease: 'power3.in',
-                    duration: 1.5,
+                    duration: 0.5,
                 },
                 'img'
             );
 
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: aboutMeSection,
-                start: "top top",
-                end: "bottom center",
-                onUpdate: self => {
-                    gsap.to(
-                        '#about-me-image',
-                        {
-                            objectPosition: `0 ${self.progress * 25 * self.direction}px`,
-                            duration: 0.5,
-                        },
-                    )
-                }
+        ScrollTrigger.create({
+            trigger: aboutMeSection,
+            start: "-=100px top",
+            end: "bottom center",
+            scrub: 1,
+            onUpdate: self => {
+                gsap.to(
+                    '#about-me-image',
+                    {
+                        objectPosition: `0 ${self.progress * 100}px`,
+                        duration: 0.5,
+                        ease: 'power1'
+                    },
+                )
             }
-        })
+        });
 
         return () => {
             timeline.reverse();

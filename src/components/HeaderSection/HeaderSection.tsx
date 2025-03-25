@@ -9,10 +9,11 @@ export const HeaderSection = () => {
                 <Image
                     src={heroinePic}
                     alt="heroine"
-                    fill={true}
+                    // fill={true}
                     className={"object-cover lg:object-fill object-left"}
                     loading={"eager"}
-                    priority
+                    quality={100}
+                    priority={true}
                 />
             </section>
             <LogoSection/>

@@ -5,6 +5,7 @@ import {LanguageContext} from "@services/LanguageProvider";
 import {useAboutMeSectionGSAPHook} from "@components/AboutMeSection/useAboutMeSectionGSAPHook";
 import {AboutMeText} from "@components/AboutMeSection/components/Text";
 import {AboutMeImage} from "@components/AboutMeSection/components/Image";
+import {cn} from "@lib/utils";
 
 export const AboutMeSection = () => {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -15,9 +16,11 @@ export const AboutMeSection = () => {
     return (
         <section id="about-me-section" className="relative overflow-hidden bg-opacity-10 bg-pink-400">
             <div ref={containerRef}
-                 className="bg-transparent min-h-screen gap-x-4 md:gap-x-8 w-full margin-auto p-12 overscroll-none flex flex-col md:flex-row justify-center items-start content-start">
-                <AboutMeText languageData={aboutMe}/>
+                 className={cn(
+                     "bg-transparent min-h-screen gap-x-4 md:gap-x-8 w-full margin-auto p-12 overscroll-none",
+                     "flex flex-col md:flex-row justify-evenly items-start content-start")}>
                 <AboutMeImage/>
+                <AboutMeText languageData={aboutMe}/>
             </div>
         </section>
     )

@@ -3,7 +3,7 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {RefObject} from "react";
 
-export const UseGallerySectionGSAPHook = (imageSrc: string[], galleryRef: RefObject<HTMLDivElement | null>) => {
+export const UseGallerySectionGSAPHook = (galleryRef: RefObject<HTMLDivElement | null>) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
@@ -12,10 +12,6 @@ export const UseGallerySectionGSAPHook = (imageSrc: string[], galleryRef: RefObj
         if (!images.length || !galleryRef.current) {
             return false;
         }
-
-        gsap.to('.self-promo', {
-            x: '0',
-        });
 
         images.forEach((image: HTMLImageElement) => {
             gsap.to(image, {
@@ -29,5 +25,5 @@ export const UseGallerySectionGSAPHook = (imageSrc: string[], galleryRef: RefObj
                 },
             });
         });
-    }, [imageSrc]);
+    }, []);
 }

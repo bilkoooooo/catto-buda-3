@@ -9,6 +9,7 @@ import {SpeedInsights} from "@vercel/speed-insights/next"
 import {Analytics} from "@vercel/analytics/react"
 import bgDark from "@assets/bg_dark.jpg";
 import {Footer} from "@components/Footer";
+import {GalleryImagesProvider} from "@services/GalleryImagesProvider";
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
@@ -18,10 +19,12 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <UserDeviceProvider>
             <LanguageProvider>
                 <MenuStateProvider>
-                    <Navbar/>
-                    <Sidebar/>
-                    {children}
-                    <Footer/>
+                    <GalleryImagesProvider>
+                        <Navbar/>
+                        <Sidebar/>
+                        {children}
+                        <Footer/>
+                    </GalleryImagesProvider>
                 </MenuStateProvider>
             </LanguageProvider>
         </UserDeviceProvider>
