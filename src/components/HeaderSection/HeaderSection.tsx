@@ -14,8 +14,9 @@ export const HeaderSection = () => {
                     quality={100}
                     priority={true}
                 />
+
+                <LogoSection/>
             </section>
-            <LogoSection/>
         </>
     )
 }

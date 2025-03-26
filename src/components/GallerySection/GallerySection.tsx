@@ -11,13 +11,16 @@ export const GallerySection = () => {
     UseGallerySectionGSAPHook(galleryRef);
 
     const SelfPromo = () => (
-        <a className={"self-promo self-center text-4xl text-stroke-white duration-300 hover:text-white"}
-           href={"/gallery"}>Galléria</a>
+        <div className={"flex flex-col items-center justify-center gap-5"}>
+            <a className={"self-promo self-center text-6xl uppercase font-bold text-stroke-white duration-300 hover:text-white"}
+               href={"/gallery"}>Galléria</a>
+            <a>Instagram</a>
+        </div>
     )
 
     return (
         <section id="gallery-section" ref={galleryRef}
-                 className="w-screen min-h-screen relative flex flex-col content-center justify-center bg-gray-900/50">
+                 className="w-screen min-h-screen relative flex flex-col py-20 content-center justify-between bg-gray-900/50">
             <ImageList additionalClasses={"lg:[&>*:nth-child(odd)]:mb-20 lg:[&>*:nth-child(even)]:mt-20"}/>
             <SelfPromo/>
             {/*{imageToShow && <ImageViewerComponent imgIndex={imageToShow} gallery={gallery} onClose={() => setImageToShow(null)}/>}*/}

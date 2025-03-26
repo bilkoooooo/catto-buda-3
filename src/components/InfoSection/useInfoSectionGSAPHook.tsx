@@ -26,17 +26,20 @@ export const useInfoSectionGSAPHook = (containerRef: RefType, progressBarRef: Re
             sections.forEach((section: Element) => {
                 const childPanel = section.querySelector('.panel-child');
                 if (childPanel) {
+                    gsap.set(childPanel, {
+                        opacity: 0,
+                        x: 0
+                    });
                     gsap
                         .to(childPanel, {
-                            x: 0,
+                            opacity: 1,
                             ease: "power1.in",
-                            duration: 1,
+                            duration: 0.5,
+                            immediateRender: true,
                             scrollTrigger: {
                                 trigger: section,
                                 start: "top bottom",
                                 end: "bottom bottom",
-                                // toggleActions: "play reverse play reset",
-                                // markers: true,
                             }
                         })
                 }

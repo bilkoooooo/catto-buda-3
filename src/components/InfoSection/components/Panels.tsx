@@ -19,7 +19,7 @@ export const Panels = ({info}: PanelsProps) => {
     const {title, summary, id, Icon} = info;
     return (
         <div id={id}
-             className={cn(`panel flex py-2 md:py-8 px-2 md:px-8 snap-start relative overscroll-y-auto`)}>
+             className={cn(`panel flex py-2 md:py-8 px-2 md:px-8 relative overscroll-y-auto`)}>
             <div
                 className={cn(
                     "panel-child max-w-[100%] w-full md:w-auto lg:max-w-[45%] bg-darkRed shadow-2xl min-w-0 lg:min-w-[45%]",

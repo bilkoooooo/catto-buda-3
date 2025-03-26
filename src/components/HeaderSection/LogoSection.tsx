@@ -29,16 +29,19 @@ export const LogoSection = () => {
         <section id="logo-section"
                  className={cn(
                      "flex center justify-center items-center text-center",
-                     "z-40 w-full h-screen fixed inset-0 m-0",
+                     "z-40 w-full h-screen absolute inset-0 m-0",
                      bebasNeue.className)}
         >
-            <div id={"text"} className="text-8xl uppercase min-h-0">
-                <div className={"flex gap-1"}>
-                    <AnimatedLogoDiv text={"Kis"}/>
-                    <AnimatedLogoDiv text={"Brigi"}/>
-                </div>
-                <AnimatedLogoDiv text={"Tattoo"} classNames={"  "}/>
-            </div>
+
+          <div className={"relative"}>
+              <div id={"text"} className="text-8xl uppercase min-h-0">
+                  <div className={"flex gap-1"}>
+                      <AnimatedLogoDiv text={"Kis"}/>
+                      <AnimatedLogoDiv text={"Brigi"}/>
+                  </div>
+                  <AnimatedLogoDiv text={"Tattoo"} classNames={"  "}/>
+              </div>
+          </div>
         </section>
     )
 }

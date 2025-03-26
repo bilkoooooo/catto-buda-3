@@ -31,7 +31,7 @@ export const ImageList = ({imgCount = 5, additionalClasses = '', imgSettings = {
                     src={image}
                     id={"gallery_" + index}
                     alt={image}
-                    className={"p-4 duration-300 image snap-start aspect-square object-fill"}
+                    className={"p-4 duration-300 image aspect-square object-fill"}
                     {...imgSettings}
                 />
 

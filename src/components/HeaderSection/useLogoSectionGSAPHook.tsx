@@ -29,7 +29,7 @@ export const useLogoSectionGSAPHook = () => {
                 .to(animatedTexts, {
                     xPercent: 2 / 3 * -100,
                     duration: 1,
-                    delay: 2,
+                    delay: 1,
                     ease: 'power1.in'
                 })
                 .set(animatedTexts, {
@@ -44,6 +44,7 @@ export const useLogoSectionGSAPHook = () => {
                     scrub: 1,
                     pin: false,
                     start: "top top",
+                    immediateRender: true,
                     endTrigger: "#top-section",
                     end: "+=350",
                     onLeave: () => {
@@ -57,10 +58,12 @@ export const useLogoSectionGSAPHook = () => {
 
             scrollAnim
                 .to('#logo-section #text', {
-                    ease: 'power1.inOut',
+                    // ease: 'power1.out',
+                    ease: 'none',
                     yPercent: 100,
                     duration: 0.75,
                     opacity: 0,
+                    display: 'none',
                 }).to(
                 '#logo-section',
                 {

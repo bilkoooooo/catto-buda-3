@@ -21,11 +21,6 @@
     }
 }
 
-html {
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
-}
-
 body {
     overflow-x: hidden;
     color: var(--foreground);
@@ -45,7 +40,6 @@ body {
     #gallery-section,
     .placeholder {
         min-height: 100vh;
-        /*scroll-snap-align: start;*/
 
         @media screen and (max-width: 768px) {
             scroll-snap-align: none;

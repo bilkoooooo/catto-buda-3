@@ -10,6 +10,7 @@ export const GalleryImagesProvider = ({children}: { children: ReactNode }) => {
         fetch('/api/gallery', {
             method: 'POST',
             body: JSON.stringify({limit: 10, offset: 0}),
+            cache: "force-cache"
         })
             .then((response) => response.json())
             .then(({images}) => setImages(images))

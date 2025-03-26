@@ -16,7 +16,7 @@ export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: aboutMeSection,
-                start: '-=100 center',
+                start: '+=100 bottom',
                 end: () => "center center",
             },
             ease: "none"
@@ -37,7 +37,7 @@ export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement
         )
             .to(containerRef.current.querySelector('.image-hider'), {
                     xPercent: -200,
-                    ease: 'power3.in',
+                    ease: 'power4.out',
                     duration: 0.5,
                 },
                 'img'
