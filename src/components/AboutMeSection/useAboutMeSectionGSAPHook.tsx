@@ -1,10 +1,13 @@
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
-import {RefObject} from "react";
+import {RefObject, useContext} from "react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {UserDeviceContext} from "@services/UserDeviceProvider";
 
 export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement | null>) => {
     gsap.registerPlugin(ScrollTrigger);
+
+    const isMobile = useContext(UserDeviceContext)?.deviceType !== 'Desktop';
 
     useGSAP(() => {
         if (!containerRef?.current) {
@@ -16,49 +19,48 @@ export const useAboutMeSectionGSAPHook = (containerRef: RefObject<HTMLDivElement
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: aboutMeSection,
-                start: '+=100 bottom',
-                end: () => "center center",
+                start: 'top top',
+                end: () => "bottom bottom",
             },
             ease: "none"
         });
 
 
-        timeline.fromTo('#about-me-text', {
-                yPercent: -100,
-                opacity: 0.6,
-                scale: 0.4
-            }, {
-                yPercent: 0,
-                opacity: 1,
-                duration: 1.5,
-                scale: 1,
-            },
-            "text"
-        )
-            .to(containerRef.current.querySelector('.image-hider'), {
-                    xPercent: -200,
-                    ease: 'power4.out',
-                    duration: 0.5,
+        if (!isMobile) {
+            timeline.fromTo('#about-me-text', {
+                    opacity: 0.6,
+                }, {
+                    opacity: 1,
+                    duration: 1.5,
                 },
-                'img'
+                "text"
             );
 
-        ScrollTrigger.create({
-            trigger: aboutMeSection,
-            start: "-=100px top",
-            end: "bottom center",
-            scrub: 1,
-            onUpdate: self => {
-                gsap.to(
-                    '#about-me-image',
-                    {
-                        objectPosition: `0 ${self.progress * 100}px`,
-                        duration: 0.5,
-                        ease: 'power1'
-                    },
-                )
-            }
-        });
+            const common = {
+                duration: 0.5,
+                ease: 'power1',
+            };
+
+            const image = aboutMeSection.querySelector('#about-me-image') as HTMLImageElement;
+
+            ScrollTrigger.create({
+                trigger: aboutMeSection,
+                start: "-=100px top",
+                end: "bottom center",
+                scrub: 1,
+                onUpdate: ({progress}) => {
+                    gsap.to(image, {
+                        objectPosition: `0 ${progress * 50}px`,
+                        ...common
+                    });
+
+                    gsap.to(image, {
+                        objectPosition: `0 0`,
+                        ...common
+                    });
+                }
+            });
+        }
 
         return () => {
             timeline.reverse();

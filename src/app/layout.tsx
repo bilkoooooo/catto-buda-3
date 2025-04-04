@@ -7,14 +7,14 @@ import {LanguageProvider} from "@services/LanguageProvider";
 import {UserDeviceProvider} from "@services/UserDeviceProvider";
 import {SpeedInsights} from "@vercel/speed-insights/next"
 import {Analytics} from "@vercel/analytics/react"
-import bgDark from "@assets/bg_dark.jpg";
+import bg4 from "@assets/bg_4.jpg";
 import {Footer} from "@components/Footer";
 import {GalleryImagesProvider} from "@services/GalleryImagesProvider";
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="hu">
-        <body className={"bg-fixed bg-center bg-contain"} style={{backgroundImage: `url(${bgDark.src})`}}>
+        <body className={"bg-fixed bg-center bg-contain"} style={{backgroundImage: `url(${bg4.src})`}}>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <UserDeviceProvider>
             <LanguageProvider>

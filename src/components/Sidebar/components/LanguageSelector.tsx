@@ -12,7 +12,7 @@ export const LanguageSelector = ({languageText}: { languageText: string }) => {
 
     const LanguagesContainer = () => isLanguageSelectorOpen ? <div
         className={cn(
-            "flex w-screen h-16 fixed bottom-0 left-0 bg-darkRed justify-center",
+            "flex flex-col h-screen w-16 fixed bottom-0 right-0 bg-darkRed justify-center",
         )}> {
         languages.map(({Icon, code}) => (
             <div key={code}

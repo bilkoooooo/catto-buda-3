@@ -8,7 +8,9 @@ export const AboutMeText = ({languageData}: { languageData: AboutMeType }) => {
         <div id={"about-me-text"}
              className={cn(
                  "flex lg:basis-auto m:basis-1/2 sm:basis-full flex-col gap-4 text-2xl leading-[1.8] pt-8",
-                 "lg:max-w-[500px] sm:w-full tracking-widest self-stretch overflow-auto text-white justify-start")}>
+                 "lg:max-w-[500px] sm:w-full tracking-widest self-stretch overflow-auto text-white justify-start",
+                 "text-justify md:text-left"
+             )}>
             <div>“
                 <strong>
                     {quote}

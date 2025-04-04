@@ -17,7 +17,7 @@ export const VideoSection = () => {
                 src={introPic.src}
                 alt="heroine"
                 fill={true}
-                className={"scale-[25%] aspect-video"}
+                className={"scale-[100%] sm:scale-[50%] lg:scale-[25%] aspect-video"}
                 loading={"lazy"}
             />
             <VideoText/>
