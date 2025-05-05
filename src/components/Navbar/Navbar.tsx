@@ -30,6 +30,9 @@ const MENU_OPEN = () => (
     </svg>
 );
 
+export const IconSvg =  () => <Image src={logo} alt="logo" width={32} height={32} className="h-10 w-10"/>
+
+
 export function Navbar() {
     const {navbarRef} = useContext(MenuStateContext);
     const {
@@ -53,7 +56,7 @@ export function Navbar() {
                     <div className="flex flex-1 h-full items-center justify-between">
                         <div>
                             <a href={"/"} className="flex items-center gap-2.5 no-underline">
-                                <Image src={logo} alt="logo" width={32} height={32} className="h-10 w-10"/>
+                                <IconSvg/>
                             </a>
                         </div>
 

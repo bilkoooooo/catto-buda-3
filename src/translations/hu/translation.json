@@ -71,32 +71,6 @@
         "<span className=\"bg-lime-600\">1-1,5 hétig maximum.</span>",
         "Utána testápolóval érdemes még a bőrt ápolni."
       ],
-      "list": [
-        {
-          "title": "TILOS (az első 2-3 nap):",
-          "items": [
-            "erősen megizzadni",
-            "a sebet piszkálni, fertőzésnek kitenni"
-          ]
-        },
-        {
-          "title": "(2-3 hét): ",
-          "items": [
-            "áztatni",
-            "szaunázni",
-            "szoláriumozni/napoztatni",
-            "vakarni (normális ha viszket, ez a sebgyógyulás miatt van)",
-            "hámlás közben csipkedni",
-            "többet krémezni az előírtnál"
-          ],
-          "colors": {
-            "background": {
-              "from": "#0000FF",
-              "to": "#4B0082"
-            }
-          }
-        }
-      ],
       "text2": [
         "Hosszú távon minden tetoválásnak árt a nap UV sugárzása, így ajánlott a szolárium és napoztatás kerülése a tetovált részen, illetve magas faktorszámú naptej használata.",
         "A tetoválás után a bőr hámrétege 6 hónapig regenerálódik, tehát addig nem olyan vastag és nem ad akkora védelmet a testnek, mint az ép bőr! Ilyenkor a naptól takarva kell védeni, a naptej nem elegendő!",
@@ -139,28 +113,15 @@
       ],
       "text2": [
         "Tehát Augusztusban és Decemberben érdemes nekem írni, mert olyankor tudok vele érdemben foglalkozni."
-      ],
-      "list": [
-        {
-          "title": "Ezért a következő rendszer szerint dolgozom:",
-          "items": [
-            "csak e-mailben lehet hozzám bejelentkezni",
-            "Augusztusban adom ki az időpontokat Szeptembertől Januárig",
-            "Decemberben adom ki Januártól Májusig",
-            "nyáron keveset dolgozom egyéni megbeszélés alapján, ennek két technikai oka van: pihenek, illetve a nyári nap szinte teljesen tönkreteszi a friss munkám"
-          ]
-        }
       ]
     },
     {
       "id": "waitingList",
-      "title": "\"Mikorra tudsz időpontot adni, mekkora a várólista?\"",
+      "title": "Mikorra tudsz időpontot adni, mekkora a várólista?",
       "summary": "",
       "neededOnInfo": false,
-      "text": [],
       "list": [
         {
-          "title": null,
           "items": [
             "nem tudom",
             "ha nem kaptál időpontot, esetleg választ a leveledre, kérlek ne sértődj meg, ha biztos vagy benne, hogy szívesen vállalnám a kérésed, írj újra! Elképzelhető, hogy nem vettem észre, nem kerültél sorra stb.",

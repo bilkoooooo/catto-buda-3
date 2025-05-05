@@ -20,11 +20,11 @@ export default function Home() {
             <title>{title}</title>
             <meta name="title" content={title}/>
             <div id="container" className="w-full relative">
-                <HeaderSection/>
+                {/*<HeaderSection/>*/}
 
-                <AboutMeSection/>
+                {/*<AboutMeSection/>*/}
 
-                <VideoSection/>
+                {/*<VideoSection/>*/}
 
                 <InfoSection/>
 
